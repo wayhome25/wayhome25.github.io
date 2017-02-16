@@ -13,11 +13,14 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home" title="{{ site.title }}">
-              <img class="masthead-logo" src="{{ site.baseurl }}{{ site.logo }}"/>
+            <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+              <!-- <img class="masthead-logo" src="{{ site.baseurl }}{{ site.logo }}"/> -->
+              <img class="masthead-logo" src="/assets/images/browser.png"/>
+
+            <small id="blog-title">{{ site.tagline }}</small>
             </a>
-            <small>{{ site.tagline }}</small>
           </h3>
+
         </div>
       </div>
 
@@ -25,7 +28,7 @@
         {{ content }}
       </div>
     </div>
-
+    <a href="/search/" class="search"><img src="/assets/images/search.png"/></a>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>

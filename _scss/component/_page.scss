@@ -7,3 +7,24 @@
   }
 }
 
+#search-input{
+  border: 2px solid salmon;
+  width: 500px;
+  height: 40px;
+  padding-left: 0.8rem;
+  font-size: 1rem;
+  color: #268bd2;
+}
+
+#search-input:focus{
+  outline: none;
+}
+
+#results-container{
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+#results-container > li{
+  margin-bottom: 0.5rem;
+}
