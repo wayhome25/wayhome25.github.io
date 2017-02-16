@@ -13,7 +13,7 @@ title: Blog
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    {% if post.tags %} | 
+    {% if post.tags %} |
     {% for tag in post.tags %}
     <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
     {% endfor %}
@@ -48,4 +48,3 @@ title: Blog
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-

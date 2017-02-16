@@ -1,6 +1,6 @@
 # Site Info
 title: 웨이홈의 블로그
-tagline: 'wayhome blog'
+tagline: '시행착오 개발로그'
 description: 'github jekyll 기반 블로그입니다.'
 baseurl: ""
 url: http://wayhome25.github.io
@@ -33,7 +33,7 @@ author:
     # facebook:  <hide>
     # twitter:   https://twitter.com/Li_Zhihao
     # weibo:     http://weibo.com/41173780
-    email:     siwabada@gmail.com
+    email:    http://gmail.com/siwabada@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -46,17 +46,14 @@ nav:
   About:
     - '/about/'
   Github Project:
-    - 'http://codinfox.github.io/'
+    - 'https://github.com/wayhome25'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
 
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-92094009-1' # leave blank if you don't want google analytics
-disqus_short_name: '몽키' # leave blank if you don't want disqus
+disqus_short_name: 'wayhome25-github-io' # leave blank if you don't want disqus
