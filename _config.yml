@@ -26,14 +26,13 @@ version: 1.0.0
 author:
   name: wayhome
   description: 초보개발자
-  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/wayhome25
     # facebook:  <hide>
     # twitter:   https://twitter.com/Li_Zhihao
     # weibo:     http://weibo.com/41173780
-    email:    http://gmail.com/siwabada@gmail.com
+    email:    mailto:siwabada@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -45,8 +44,8 @@ nav:
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'
-  Github Project:
-    - 'https://github.com/wayhome25'
+  Search:
+    - '/search/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
@@ -57,3 +56,8 @@ category_page: '/blog/categories/'
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-92094009-1' # leave blank if you don't want google analytics
 disqus_short_name: 'wayhome25-github-io' # leave blank if you don't want disqus
+
+
+# Use the following plug-ins
+gems:
+  - jekyll-paginate

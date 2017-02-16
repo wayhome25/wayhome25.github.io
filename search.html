@@ -1,14 +1,9 @@
 ---
-layout: default
+layout: page
+title: Search
 page_title: Search
 permalink: /search/
 ---
-<!DOCTYPE html>
-<html lang="en-us">
-
-  {% include head.html %}
-
-<body>
 <div id="results">
   <h1><!-- `key` listing for `value` --></h1>
 
@@ -19,8 +14,8 @@ permalink: /search/
 
 <!-- Html Elements for Search -->
 <div id="search-container">
-<input class="serch-input" type="text" id="search-input" placeholder="검색어를 입력하세요">
-<ul id="results-container" class="tags-expo-posts"></ul>
+<input type="text" id="search-input" placeholder="검색어를 입력하세요.">
+<ul id="results-container"></ul>
 </div>
 
 <!-- Script pointing to jekyll-search.js -->
@@ -35,9 +30,7 @@ permalink: /search/
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: 'No results found',
         limit: 10,
-        fuzzy: false,
+        fuzzy: true,
         exclude: ['Welcome']
       })
 </script>
-</body>
-</html>
