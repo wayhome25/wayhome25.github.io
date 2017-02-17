@@ -6,11 +6,12 @@ tags: [nodejs]
 comments: true
 ---
 # nodejs 간단한 웹앱 만들기
-> [생활코딩 Node.js 강의](https://opentutorials.org/course/2136/11853)
+> [생활코딩 Node.js 강의](https://opentutorials.org/course/2136/11853)   
+> Nodejs를 이용해서 간단한 서버 에플리케이션을 만들어 본다.
 
-## 서버연결
+# nodejs 서버연결
 
-### 서버연결을 위한 코드
+## 서버연결을 위한 코드
 - node.org > about 에서 파일 복사 후 `webserver.js` 파일에 붙여넣기
 
   ```javascript
@@ -38,7 +39,7 @@ comments: true
   ```
 - 웹브라우저를 통해 http://127.0.0.1:3000/ 경로에 접속하면 브라우저에 `hello world` 가 출력
 
-### 이것의 의미
+## 이것의 의미
 
 - webserver.js 자바스크립트의 코드가 웹 브라우저를 통해서 요청한 내용을 받아서 우리에게 hello world 라는 텍스트를 전송 한 것
 - 그 결과 우리의 웹브라우저는 화면에 hello world를 출력 할 수 있게 된 것  
