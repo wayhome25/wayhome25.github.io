@@ -22,7 +22,7 @@ comments: true
 - a.com을 가진 서버 컴퓨터에는 여러가지 서버 sw (엡서버, 게임서버, 채팅서버 등)가 설치되어 있을 수 있다.
 - 그럼 사용자가 a.com을 치고 서버 컴퓨터에 접속했을때, 서버 컴퓨터는 어떤 서버애플리케이션을 연결해서 그 애플리케이션이 응답할 수 있게 하는가?
 
-  <p text-align="center"><img width="600px" height="" src="assets/server.png"></p>
+  <p text-align="center"><img width="600px" height="" src="./assets/server.png"></p>
 
 - 컴퓨터에는 0 ~ 65535번의 포트(port)라는 문이 있다.
 - 보통 웹서버는 80번 포트에 연결시켜 놓는다.    
@@ -37,7 +37,7 @@ comments: true
     http://naver.com:80 // :80생략 가능, https인 경우 오류발생
     http://daum.net:80 // http를 통해서 접속하는 경우 웹서버는 80번 포트를 쓰자고 약속되어 있음
     ```
-    <p text-align="center"><img width="600px" height="" src="assets/port.png"></p>
+    <p text-align="center"><img width="600px" height="" src="./assets/port.png"></p>
 
 
 ***
