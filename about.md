@@ -17,6 +17,6 @@ title: About
 
 
 - 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
-  - mysql, php, javascript, html, css, bootstrap  
+  - mysql, php, javascript, bitnami, html, css, bootstrap  
 - firebase 연습겸 만든 [simple to-do list](https://simple-todolist.firebaseapp.com/)
   - firebase, javascript, html, css, materialize ui framework
