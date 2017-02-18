@@ -96,7 +96,7 @@ h2 {
 }
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 h4, h5, h6 {
   margin-top: 1rem;
@@ -111,6 +111,7 @@ p {
 
 strong {
   color: #303030;
+  font-weight: bold !important;
 }
 
 
@@ -130,7 +131,7 @@ dd {
 /* Misc */
 hr {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   border: 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #fff;
@@ -163,7 +164,7 @@ pre {
   display: block;
   overflow-x: auto;
   max-width: 100%;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: .8rem;
@@ -172,12 +173,13 @@ pre {
   white-space: pre;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
+  // background-color: #f9f9f9;
+  background-color: #e6e6e6;
 
 }
 pre code {
   padding: 0;
-  font-size: 100%;
+  font-size: 90%;
   color: inherit;
   background-color: transparent;
 }

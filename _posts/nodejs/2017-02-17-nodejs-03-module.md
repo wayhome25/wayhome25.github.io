@@ -16,9 +16,9 @@ comments: true
 - 따라서 nodejs 에서는 기본적인 웹서버를 만들어 놓고, 사용자가 쓸 수 있도록 함
 - 사용자는 nodejs가 마련해 놓은 웹서버를 가져다 쓸 수 있는 방법을 배운다.
 
-### nodejs의 서버 접속 모듈
+## nodejs의 서버 접속 모듈
 
-#### 코드 전체
+### 코드 전체
 ```javascript
 const http = require('http');
 const hostname = '127.0.0.1';
@@ -35,7 +35,7 @@ server.listen(port, hostname, () => {
 });
 ```
 
-#### http 모듈 호출 코드
+### http 모듈 호출 코드
 
 ```javascript
 const http = require('http');
@@ -52,9 +52,9 @@ const http = require('http');
 - nodejs는 기본적으로 앱을 만들기 위한 부품을 기본적으로 제공한다. (ex. http)
 - 부품의 사용설명서는 nodejs 사이트의 [document](https://nodejs.org/dist/latest-v6.x/docs/api/)에서 확인 가능하다.
 
-### nodejs의 os 모듈 사용해보기
+## nodejs의 os 모듈 사용해보기
 
-- os.js
+### os.js
 
 ```javascript
 const os = require('os');
@@ -62,9 +62,9 @@ console.log(os.platform());
 // The os.platform() method returns a string identifying
 // the operating system platform as set during compile time of Node.js.
 ```
-- 터미널
+### 터미널
 
-```
+```shell
 $ node os.js
 darwin
 ```
