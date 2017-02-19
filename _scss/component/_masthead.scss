@@ -28,12 +28,7 @@
       color: $masthead-title-small-color;
       letter-spacing: 0;
     }
-    @media (max-width: 48em) {
-      text-align: center;
-      small {
-        display: none;
-      }
-    }
+
   }
   .masthead-logo {
     height: 30px;
