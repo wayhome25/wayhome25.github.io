@@ -141,10 +141,11 @@ a.sidebar-nav-item:focus {
 }
 
 @media (min-width: 30.1em) {
-  .sidebar-toggle {
+  .sidebar-toggle, .search {
     position: fixed;
   }
 }
+
 
 @media print {
   .sidebar-toggle {

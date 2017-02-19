@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Express-정적파일을 서비스하는 법
+title: Express-정적파일을 서비스 하는 법
 category: nodejs
 tags: [nodejs, Express]
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Express-웹페이지를 표현하는 방법
+title: Express-동적파일을 서비스 하는 법
 category: nodejs
 tags: [nodejs, Express, static]
 comments: true
@@ -42,17 +42,26 @@ app.get('/dynamic', function(req, res){
 	res.send(output);
 });
 ```
+
 - 터미널에 `node app.js` 입력 후, `http://localhost:3000/dynamic` 경로를 통해서 결과 확인한다.
 - 동적인 파일의 변경사항은 node application의 재기동이 필요하다.
 
 ## 장단점
-### 정적인 파일
-	- 장점 : 작성이 편리하다, 변경내용 적용을 위해 node application의 재기동이 필요하지 않다.
-	- 단점 : 반복, 변수 등의 프로그래밍적인 요소를 사용할 수 없다.
+### 정적인 파일 (static)
+- 장점
+	- 작성이 편리하다
+	- 변경내용 적용을 위해 node application의 재기동이 필요하지 않다.
+	- app.js에 라우터 설정이 필요없다. (http://localhost:3000/sample.html 처럼 파일명으로 바로 접속 가능)
+- 단점
+	- 반복, 변수 등의 프로그래밍적인 요소를 사용할 수 없다.
 
-### 동적인 파일
-	- 장점 : 반복, 변수 등의 프로그래밍적인 요소를 사용할 수 있다.  
-	- 단점 : js안에서 html작성이 까다롭다.
+### 동적인 파일 (dynamic)
+- 장점
+	- 반복, 변수 등의 프로그래밍적인 요소를 사용할 수 있다.  
+- 단점
+	- js안에서 html작성이 까다롭다.
 
 ## 템플릿 엔진
-- `정적인 것의 장점과 동적인 것의 장점을 합친 방법` 	
+- 정적인 것의 장점과 동적인 것의 장점을 합친 방법
+- 라우터 설정 필요, html 작성 편리, 변수 사용 가능, 수정 후 재기동 불필요
+- [템플릿 엔진 jade 알아보기](https://wayhome25.github.io/nodejs/2017/02/18/nodejs-10-express-template-engine-jade/)
