@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: wayhome
-  description: 초보개발자
+  description: 초보몽키
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/wayhome25
@@ -37,10 +37,15 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:
-    - '/'
-  Blog:
     - '/blog/'
-    - { Categories: '/blog/categories/' }
+  Categories:
+    - '/'
+    # - { Categories All: '/blog/categories/' }
+    - { TIL: '/blog/categories/#til' }
+    - { javascript: '/blog/categories/#javascript' }
+    - { nodejs: '/blog/categories/#nodejs' }
+    - { firebase: '/blog/categories/#firebase' }
+    - { algorithm: '/blog/categories/#알고리즘-문제풀이' }
     - { Tags: '/blog/tags/' }
   About:
     - '/about/'

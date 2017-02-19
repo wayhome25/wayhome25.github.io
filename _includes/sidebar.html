@@ -8,7 +8,7 @@
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
         <a href="https://www.github.com/wayhome25">
-          <img src="/public/profile-pic.png" title="View on Gravatar" alt="View on Gravatar" />
+          <img src="/public/profile-pic.png" alt="profile picture" />
         </a>
       </div>
       <div class="sidebar-personal-info-section">
@@ -36,6 +36,7 @@
     </div>
   </div>
 
+<!-- 사이드 메뉴시작 -->
   <nav class="sidebar-nav">
     {% for nav in site.nav %}
       {% assign is_relative = nav[1][0] | slice: 0 %}
