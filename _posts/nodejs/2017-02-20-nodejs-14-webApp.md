@@ -334,4 +334,6 @@ app.get(['/topic', '/topic/:id'], function(req, res) {
 ### 스타일 통일
 - 각 페이지의 (조회, 작성, 저장)의 스타일을 통일한다.
 
-### [전체코드 링크]()
+### 전체코드 링크
+- [app_file.js](https://github.com/wayhome25/nodejs/blob/master/opentutorials/app_file.js)
+- [jade file](https://github.com/wayhome25/nodejs/tree/master/opentutorials/views_file)
