@@ -20,12 +20,12 @@ comments: true
 
 ## 서버에서 일어나는 일 (포트)
 
-<center><img src="/assets/post-img/server.png" alt="" width="500"></center>
+<center><img src="/assets/post-img/nodejs/server.png" alt="" width="500"></center>
 
 - a.com을 가진 서버 컴퓨터에는 여러가지 서버 sw (엡서버, 게임서버, 채팅서버 등)가 설치되어 있을 수 있다.
 - 그럼 사용자가 a.com을 치고 서버 컴퓨터에 접속했을때, 서버 컴퓨터는 어떤 서버애플리케이션을 연결해서 그 애플리케이션이 응답할 수 있게 하는가?
 
-<center><img src="/assets/post-img/port.png" alt="" width="500"></center>
+<center><img src="/assets/post-img/nodejs/port.png" alt="" width="500"></center>
 
 - 컴퓨터에는 0 ~ 65535번의 포트(port)라는 문이 있다.
 - 보통 웹서버는 80번 포트에 연결시켜 놓는다.    
@@ -51,7 +51,7 @@ http://daum.net:80
 
 # nodejs 서버연결을 위한 코드 해석하기
 
-## 서버연결을 위한 코드
+## 서버연결을 위한 코드와 해석
 
   ```javascript
   const http = require('http');

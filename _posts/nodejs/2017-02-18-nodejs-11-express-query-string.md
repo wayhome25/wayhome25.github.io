@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Express-URL을 이용한 정보의 전달
+title: Express-URL을 이용한 정보의 전달 - 쿼리스트링
 category: nodejs
 tags: [nodejs, Express, query]
 comments: true
@@ -14,7 +14,13 @@ comments: true
 - 하나의 path(라우터) 에서 경우에 따라 다른 결과를 보여주기 위해서는 쿼리스트링이 사용된다.
 - 쿼리스트링은 어떤 애플리케이션에게 정보를 전달할 떄 사용되는 URL에 약속되어 있는 국제적인 표준
 
-<center><img src="/assets/nodejs/querystring.png" alt="" width="500"></center>
+
+<center>
+<figure>
+<img src="/assets/post-img/nodejs/querystring.png" alt="" width="500">
+<figcaption>URL의 구성요소</figcaption>
+</figure>
+</center>
 
 
 ## Express의 query 객체의 사용  

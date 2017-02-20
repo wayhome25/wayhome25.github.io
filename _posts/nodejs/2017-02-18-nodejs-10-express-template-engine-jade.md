@@ -9,6 +9,8 @@ comments: true
 > [생활코딩 Node.js 강의](https://opentutorials.org/course/2136/11915)   
 >  템플릿 엔진의 개념과 템플릿 엔진의 한 종류인 Jade를 사용하는 방법을 알아본다.
 
+`jade의 이름이 pug로 변경되었다.` [참고](https://blog.outsider.ne.kr/1225)
+
 ## 소개
 - 템플릿 엔진이란 동적인 파일과 정적인 파일의 장단점을 잘 결합한 형태의 새로운 체계이다.
 - jade는 node.js용으로 만들어진 view 템플릿 엔진이다.
@@ -91,9 +93,16 @@ app.get('/template', function(req, res){
 // app.js
 app.get('/template', function(req, res){
 	res.render('temp', {time: Date(), _title: 'Jade'});
-	//.reder() 매소드의 2번째 인자로 템플릿 파일에서 사용할 변수를 정의
+	//.reder() 매소드의 2번째 인자로 템플릿 파일에서 사용할 변수를 객체에 담아서 정의
 })
 ```
+- 변수의 사용은 jade 파일 내에서 아래와 같이 입력
+```
+body
+	p #{time}
+	p #{_title}
+```
+
 - 참고) 렌더링된 html 파일이 편하게 출력되게 하려면 아래 코드 추가   
 (구글 검색 키워드 : express jade html pretty)
 ```javascript
