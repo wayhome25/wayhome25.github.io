@@ -14,7 +14,7 @@ comments: true
 - 하나의 path(라우터) 에서 경우에 따라 다른 결과를 보여주기 위해서는 쿼리스트링이 사용된다.
 - 쿼리스트링은 어떤 애플리케이션에게 정보를 전달할 떄 사용되는 URL에 약속되어 있는 국제적인 표준
 
-<!-- 이미지 추가   -->
+<center><img src="/assets/nodejs/querystring.png" alt="" width="500"></center>
 
 
 ## Express의 query 객체의 사용  
@@ -79,4 +79,4 @@ app.get('/topic/:id/:mode', function(req, res){
 	//path 방식을 사용하는 url의 경우 params를 통해서 값을 가져올 수 있음
 })
 ```
-- Restful api 등을 통해서 시맨틱 URL을 잘 사용하는 방법에 대해서 익힐 수 있다. 
+- Restful api 등을 통해서 시맨틱 URL을 잘 사용하는 방법에 대해서 익힐 수 있다.
