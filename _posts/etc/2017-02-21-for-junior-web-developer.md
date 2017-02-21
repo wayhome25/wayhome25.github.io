@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 초보 웹 개발자를 위하여 build - 정호영님
+title: 초보 웹 개발자를 위하여 - 정호영님
 category: etc
 tags: [가이드, 웹개발, 초보]
 comments: true

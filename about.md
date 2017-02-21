@@ -5,7 +5,8 @@ title: About
 
 <p class="message">
   웹개발 입문자, 초보 <br>    
-  아직은 <a href="https://opentutorials.org/course/1189/14118">보편적이지 않은 코딩</a>을 하는중
+  강의를 듣고 공부한 내용을 정리하는 블로그
+  <!-- <a href="https://opentutorials.org/course/1189/14118">보편적이지 않은 코딩</a>을 하는중 -->
 </p>
 
 ## 공부한 것
@@ -23,7 +24,10 @@ title: About
   - [Web Front-End - 윤지수님](http://olc.kr/course/course_online_view.jsp?id=470)
 
 ## 만들어 본 것
+
 - 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
   - mysql, php, javascript, bitnami, html, css, bootstrap  
 - firebase 연습겸 만든 [simple to-do list](https://simple-todolist.firebaseapp.com/)
   - firebase, javascript, html, css, materialize ui framework
+- 프론트엔드 [연습목록](https://wayhome25.github.io/front-end/index.html)
+  - html, css, sass, javascript

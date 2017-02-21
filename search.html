@@ -12,11 +12,21 @@ permalink: /search/
   </ul>
 </div>
 
+
+
 <!-- Html Elements for Search -->
 <div id="search-container">
 <input type="text" id="search-input" placeholder="검색어를 입력하세요.">
 <ul id="results-container"></ul>
 </div>
+<!-- tag list -->
+<hr/>
+<div class="tags-expo-list">
+  {% for tag in site.tags %}
+  <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+  {% endfor %}
+</div>
+
 
 <!-- Script pointing to jekyll-search.js -->
 <script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>

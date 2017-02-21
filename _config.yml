@@ -47,7 +47,7 @@ nav:
     - { firebase: '/blog/categories/#firebase' }
     - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
     - { etc: '/blog/categories/#etc' }
-    - { Tags: '/blog/tags/' }
+    # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
   Search:

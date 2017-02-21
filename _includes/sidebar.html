@@ -60,11 +60,16 @@
               {% assign sub_url = sub_nav[1] | prepend: site.baseurl %}
             {% endif %}
             <!-- 사이드바 카테고리 소분류  -->
+
               <a class="sidebar-nav-item sidebar-nav-item-sub {% if page.url == sub_nav[1] %}active{% endif %}" href="{{ sub_url }}">
                 {% assign t = sub_nav[0] %}
-                {{ sub_nav[0] }}
-                {% assign counter = 0 %}{% for item in site.categories.firebase %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}
-
+                {{ sub_nav[0] }} -
+                  {% assign counter = 0 %}
+                  {% for item in site.categories.[t] %}
+                  {% unless item.published == false %}
+                  {% assign counter=counter | plus:1 %}
+                  {% endunless %}{% endfor %}
+                  {{ counter }}
               </a>
           {% endfor %}
         {% endfor %}
@@ -74,9 +79,6 @@
 
 
   </nav>
-  {% assign counter = 0 %}{% for item in site.categories.nodejs %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}
-
-
   <div class="sidebar-item template">
     <p>
     Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
