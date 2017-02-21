@@ -24,3 +24,13 @@ app.get('/bento', function(req, res){
 	res.send('hello bento! <img src="/bento.png">')
 })
 ```
+
+## 정적인 파일이 접근할 라우터 path 설정
+> express.static 함수를 통해 제공되는 파일에 대한 가상 경로
+
+```javascript
+app.use('/users', express.static('uploads'));
+
+```
+- 이를 통해서 /users 경로를 통해 uploads 디렉토리에 포함된 파일을 로드할 수 있음     
+  `(ex. http://localhost:3000/users/siwa.png)`

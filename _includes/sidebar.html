@@ -46,7 +46,7 @@
       {% endif %}
 
       {% assign sub_len = nav[1] | size | minus: 1 %}
-
+      <!-- 사이드바 대분류 -->
       <span class="{% if sub_len > 0 %}foldable{% endif %}">
         <a class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}" href="{{ url }}">
           {{ nav[0] }}
@@ -59,8 +59,12 @@
             {% if sub_is_relative == '/' %}
               {% assign sub_url = sub_nav[1] | prepend: site.baseurl %}
             {% endif %}
+            <!-- 사이드바 카테고리 소분류  -->
               <a class="sidebar-nav-item sidebar-nav-item-sub {% if page.url == sub_nav[1] %}active{% endif %}" href="{{ sub_url }}">
+                {% assign t = sub_nav[0] %}
                 {{ sub_nav[0] }}
+                {% assign counter = 0 %}{% for item in site.categories.firebase %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}
+
               </a>
           {% endfor %}
         {% endfor %}
@@ -68,8 +72,9 @@
 
     {% endfor %}
 
-    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+
   </nav>
+  {% assign counter = 0 %}{% for item in site.categories.nodejs %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}
 
 
   <div class="sidebar-item template">
