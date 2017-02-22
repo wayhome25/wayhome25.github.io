@@ -10,7 +10,7 @@ comments: true
 
 ## 설치
 -  nodejs.org 에서 파일 다운로드 후 설치
--  또는 nam 을 통하여 설치 (installing Node.js via package manager)
+-  또는 npm 을 통하여 설치 (installing Node.js via package manager)
 -  터미널에서 `node --version` 명령어 통해서 버전 확인
 
 ## 실행
