@@ -12,13 +12,26 @@ permalink: /search/
   </ul>
 </div>
 
-
+<div id="search-container-google">
+  <script>
+    (function() {
+      var cx = '015731003607597102937:cmvfrjrcoq0';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+  <gcse:search></gcse:search>
+</div>
 
 <!-- Html Elements for Search -->
-<div id="search-container">
+<!-- <div id="search-container">
 <input type="text" id="search-input" placeholder="검색어를 입력하세요.">
 <ul id="results-container"></ul>
-</div>
+</div> -->
 <!-- tag list -->
 <hr/>
 <div class="tags-expo-list">

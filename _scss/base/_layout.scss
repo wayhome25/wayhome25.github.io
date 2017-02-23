@@ -64,6 +64,15 @@
   outline: none;
 }
 
+#search-container-google table,
+#search-container-google td,
+#search-container-google tr,
+#search-container-google tbody{
+  border: none !important;
+}
+
+
+
 // 아이폰 6 이하
 @media (max-width: 415px) {
   #search-input{
