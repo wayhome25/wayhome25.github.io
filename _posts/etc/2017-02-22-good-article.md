@@ -16,6 +16,7 @@ comments: true
   - 3단계 : 뭔가 만들어 보기
 - [학습 조언 - 윤지수](https://github.com/nigayo/education/blob/master/learning/afterWhite.md)
 - [초보 웹 개발자를 위하여 - 정호영](https://github.com/honux77/practice/wiki/web-developer)
+- [한 눈에 개발 보기 - 개발읽어주는 남자](https://brunch.co.kr/@imagineer/58)
 
 ## 기타
 - [slideShare 북마크 자료들](https://www.slideshare.net/HyunjooLEE38/clipboards/read-again)

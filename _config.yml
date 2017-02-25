@@ -42,6 +42,7 @@ nav:
     - '/'
     # - { Categories All: '/blog/categories/' }
     - { TIL: '/blog/categories/#til' }
+    - { python: '/blog/categories/#python' }
     - { javascript: '/blog/categories/#javascript' }
     - { nodejs: '/blog/categories/#nodejs' }
     - { firebase: '/blog/categories/#firebase' }
