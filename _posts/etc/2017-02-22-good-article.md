@@ -18,5 +18,7 @@ comments: true
 - [초보 웹 개발자를 위하여 - 정호영](https://github.com/honux77/practice/wiki/web-developer)
 - [한 눈에 개발 보기 - 개발읽어주는 남자](https://brunch.co.kr/@imagineer/58)
 
+- [[웹개발자기준] 비전공자 신입으로서 전공자한테 안 밀리고 살아남는 법.tip](http://okky.kr/article/372485)
+
 ## 기타
 - [slideShare 북마크 자료들](https://www.slideshare.net/HyunjooLEE38/clipboards/read-again)

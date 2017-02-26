@@ -19,7 +19,7 @@ comments: true
 ## 느낀 점
 - 2차원 행렬을 만드는 것이 어려웠다.  
 - .map() 메소드를 잘 활용하자. [참고](https://wayhome25.github.io/javascript/2017/02/17/js-method/)  
-- 화살표 함수에 익숙해지자.[참고글](https://wayhome25.github.io/javascript/2017/02/23/js-Arrow-functions/)
+- 화살표 함수에 익숙해지자.[참고](https://wayhome25.github.io/javascript/2017/02/23/js-Arrow-functions/)
 
 ## 풀이 (Javascript)
 ```javascript
