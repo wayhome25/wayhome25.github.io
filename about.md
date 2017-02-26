@@ -11,6 +11,9 @@ title: About
 
 ## 공부한 것
 
+- tryhelloworld
+  - [파이썬 입문](http://tryhelloworld.co.kr/courses/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%AC%B8)
+  
 - 생활코딩
   - [웹 애플리케이션 만들기](https://opentutorials.org/course/1688)
   - [Javascript](https://opentutorials.org/course/743)
