@@ -1,38 +1,79 @@
-class Animal():
-    def walk(self):
-        print('걷는다')
+import datetime
 
-    def eat(self):
-        print('먹는다')
+hundred = datetime.timedelta(days = 100)
+datetime.datetime.now() + hundred
+# datetime.datetime(2017, 6, 7, 12, 33, 11, 902557)
 
-    def greet(self):
-        print('인사한다')
+how_long= datetime.datetime.now() - hundred
+# datetime.datetime(2016, 11, 19, 12, 34, 15, 39370)
 
-class Cow(Animal):
-    '''소'''
+print(how_long)
 
-class Human(Animal): # 상속 : 클래스 괄호 안에 다른 (부모)클래스를 넣는 것
-    def wave(self):
-        print('손을 흔든다')
+# # datetime 모듈을 사용하기 위해서는 코드 내에 `import datetime`이 필요하다.
+# # datetime 안에는 datetime 이라는 클래스가 존재한다.
+#
+# # datetime 클래스의 .now() 메소드는 현재 시간을 알려준다.
+# import datetime
+# datetime.datetime.now()
+# # datetime.datetime(2017, 2, 27, 12, 11, 12, 766738)
+# start_time = datetime.datetime.now()
+#
+# >>> type(start_time)
+# <class 'datetime.datetime'>
+#
+# # datetime 클래스의 .replace() 메소드는 날짜 시간을 교체해준다.
+# >>> start_time = start_time.replace(2018, 12, 25)
+# >>> start_time
+# datetime.datetime(2018, 12, 25, 12, 11, 46, 427559)
+#
+# # 원하는 날짜와 시간으로 datetime 인스턴스 만들기
+# start_time = datetime.datetime(2017, 12, 25)
+#
+# # 지금부터 ~ 2017년 크리스마스 까지 남은 시간 구하기
+# how_long = start_time - datetime.datetime.now()
+# # datetime.timedelta(300, 42173, 524163)
+# type(how_long)
+# # <class 'datetime.timedelta'>
+# # timedelta 클래스는 days 와 seconds로 시간을 계산할 수 있다.
+# print('크리스마스 까지는 {}일 {}시간 남았습니다.'.format(how_long.days, how_long.seconds // 3600))
+# # 크리스마스 까지는 300일 11시간 남았습니다.
 
-    def greet(self): # 부모 클래스의 greet 메소드를 덮어쓰기 한다.
-        self.wave()
 
-class Dog(Animal): # Animal의 내용을 상속받는다
-    def wag(self):
-        print('꼬리를 흔든다')
-
-    def greet(self): # 부모 클래스의 greet 메소드를 덮어쓰기 한다.
-        self.wag()
-
-person = Human()
-person.greet()
-
-dog = Dog()
-dog.greet()
-
-cow = Cow()
-cow.greet()
+# class Animal():
+#     def walk(self):
+#         print('걷는다')
+#
+#     def eat(self):
+#         print('먹는다')
+#
+#     def greet(self):
+#         print('인사한다')
+#
+# class Cow(Animal):
+#     '''소'''
+#
+# class Human(Animal): # 상속 : 클래스 괄호 안에 다른 (부모)클래스를 넣는 것
+#     def wave(self):
+#         print('손을 흔든다')
+#
+#     def greet(self): # 부모 클래스의 greet 메소드를 덮어쓰기 한다.
+#         self.wave()
+#
+# class Dog(Animal): # Animal의 내용을 상속받는다
+#     def wag(self):
+#         print('꼬리를 흔든다')
+#
+#     def greet(self): # 부모 클래스의 greet 메소드를 덮어쓰기 한다.
+#         self.wag()
+#
+# person = Human()
+# person.greet()
+#
+# dog = Dog()
+# dog.greet()
+#
+# cow = Cow()
+# cow.greet()
 # class Human():
 #     '''인간'''
 #     #__언더바2개__ 는 파이썬에서 특별한 함수라는 의미
