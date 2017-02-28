@@ -23,7 +23,7 @@ comments: true
 ### 클래스
 - 오브젝트를 생성하기 위한 틀 (템플릿)
 - 상태(state)와 행동(behavior)를 가짐
-- 객체는 클래스의 인스턴스다.
+- 객체는 클래스의 `인스턴스`다.
 
 ### Django와 Object
 - Django는 많은 부분에 객체를 활용한다.
@@ -33,7 +33,7 @@ comments: true
 
 ### 요약
 - 클래스 : 메소드와 값을 가지는 사용자 정의 데이터 타입
-- 객체 : 클래스를 인스턴스화 한 것
+- 객체 : `클래스를 인스턴스화` 한 것
 
 ## 오브젝트 실습
 
@@ -44,10 +44,10 @@ class Text:
         self.text = str
 
     def __str__(self):
-        return "Object: " + self.text
+        return "Text Class: " + self.text
 
 t = Text("hi")
-print(t) # Object: hi
+print(t) # Text Class: hi
 print(t.text) # hi
 ```
 
@@ -58,10 +58,11 @@ print(t.text) # hi
 - `인스턴스 변수` : 인스턴스마다 개별적으로 다른 값을 가지는 변수 (메소드 안에서 self와 함께 정의)
 
 ```python
-num_users = 0 # class 변수
-def __init__(self, name):
-    self.name = name # instance 변수 (메소드 안에서 self라는 키워드를 사용해서 선언하는 변수)
-    User.num_users += 1
+class User:
+  num_users = 0 # class 변수
+  def __init__(self, name):
+      self.name = name # instance 변수 (메소드 안에서 self라는 키워드를 사용해서 선언하는 변수)
+      User.num_users += 1
 
 u = User('monkey')
 print(User.num_users, u.name) # 1 monkey
@@ -73,3 +74,90 @@ print(User.num_users, u.num_users, u2.num_users) # 2, 2, 2
 ```
 
 ## 오브젝트 실습 2
+
+```python
+class Text:
+    def __init__(self, str):
+        self.text = str
+
+    def __str__(self):
+        return "Text Class: " + self.text
+
+class User:
+    numUsers = 0 # 클래스 변수
+    def __init__(self, name):
+        self.numArticle = 0 # 인스턴스 변수로 초기화
+        self.name = name
+        self.articles = [] # 인스턴스 변수
+        User.numUsers += 1
+
+    def write(self, text):
+        self.articles.append(text)
+        self.numArticle += 1
+
+    def __str__(self):
+        return "User class: %s, %s" % (self.name, ' / '.join(str(p) for p in self.articles)) #방법 1
+        # return 'User class : %s, %s' % (self.name, [str(p) for p in self.articles]) 방법 2
+
+
+t = Text('This is some text')
+t2 = Text('This is some text2')
+user = User('monkey')
+user.write(t)
+user.write(t2)
+
+# print([t][0])
+print(t) # Text Class: This is some text
+print(user,',',user.numArticle)
+#monkey, Text Class: This is some text / Text Class: This is some text2, 2
+```
+
+## 오브젝트 실습 3
+- 장고에서 `__str__` 메소드 오버라이딩과 `클래스 상속`은 자주 사용한다.   
+  (상속받는 클래스에서 함수를 재구현하는 것을 메서드 오버라이딩(Overriding) 이라고 부른다.)
+
+```python
+class Text:
+    def __init__(self, str):
+        self.text = str
+
+    def __str__(self):
+        return "Text Class " + self.text
+
+    def getLength(self):
+        return len(self.text)
+
+class Article(Text): #Article 클래스(자식클래스)는 Text 클래스(부모클래스, 슈퍼클래스)를 상속 받았다.
+    def __init__(self, title, text):
+        self.title = title
+        self.text = text
+
+    def __str__(self):
+        return 'Article Class %s %s' % (self.title, self.text)
+
+class User:
+    numUsers = 0 # 클래스 변수
+    def __init__(self, name):
+        self.numArticle = 0 # 인스턴스 변수로 초기화
+        self.name = name
+        self.articles = [] # 인스턴스 변수
+        User.numUsers += 1
+
+    def write(self, text):
+        self.articles.append(text)
+        self.numArticle += 1
+
+    def __str__(self):
+        return "%s, %s" % (self.name, ' / '.join(str(p) for p in self.articles))
+
+t = Article('hello', 'This is some text') 
+t2 = Article('hello2', 'This is some text2')
+user = User('monkey')
+user.write(t)
+user.write(t2)
+
+# print([t][0])
+print(t,', ',t.getLength()) # Article Class hello This is some text ,  17
+print(user,',',user.numArticle)
+# monkey, Article Class hello This is some text / Article Class hello2 This is some text2 , 2
+```
