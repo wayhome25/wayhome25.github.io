@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 03. 첫번째 장고앱 1 - 로또 만들기, 프로젝트 및 앱 생성
+title: django 03. 첫번째 장고앱 1 - MTV, 프로젝트 및 앱 생성
 category: Django
 tags: [python, 파이썬, Django]
 comments: true

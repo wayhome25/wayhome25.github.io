@@ -12,7 +12,7 @@ comments: true
 - 터미널에서 `$ python manage.py shell` 입력
 - 장고의 기능을 그대로 사용 가능
 
-### GuessNumbers.objects.all()
+### 모델클래스명.objects.all()
 모델 클래스의 오브젝트를 리스트로 모두 가져온다.
 
 ```shell
@@ -24,7 +24,7 @@ $ python manage.py shell
 <QuerySet [<GuessNumbers: siwa - 당첨기원!>, <GuessNumbers: sunshine - 2등도 좋아!>, <GuessNumbers: monkey - 3등도 좋지~>]>
 ```
 
-### GuessNumbers.objects.get()
+### 모델클래스명.objects.get()
 모델 클래스의 특정 오브젝트를 가져온다. `.save()`를 통해서 DB에 저장할 수 있다.
 
 ```shell
@@ -35,5 +35,6 @@ $ python manage.py shell
 >>> g.name
 'siwa'
 >>> g.name = 'siwaaaaaa'
+>>> g.generate()
 >>> g.save()
 ```
