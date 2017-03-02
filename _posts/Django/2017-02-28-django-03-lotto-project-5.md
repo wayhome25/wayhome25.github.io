@@ -26,7 +26,7 @@ def index(request):
 ```
 
 - 템플릿 폴더 및 html 템플릿 파일 작성
-  - 경로 : `mylotto/template/lotto/default.html` (app 폴더 내)
+  - 경로 : `mylotto/templates/lotto/default.html` (app 폴더 내)
   - 장고 사이트에 여러 어플리케이션 등록 가능, 나중에 중복생성하지 않기 위해서 템플릿을 위 경로에 작성
   - http://127.0.0.1:8000/lotto/ 를 통해서 템플릿 연동 완성!
 
@@ -36,10 +36,11 @@ def index(request):
 
   ```html
     {% raw %}
+    <!DOCTYPE html>
     {% load staticfiles %}
     ...
     ...
-    <link rel="stylesheet" href="{% static 'css.lotto.css'%}">
+    <link rel="stylesheet" href="{% static 'css/lotto.css'%}">
     {% endraw %}
   ```
   - 장고에게 static 파일이 (css) 생겼다는 걸 알려준다.

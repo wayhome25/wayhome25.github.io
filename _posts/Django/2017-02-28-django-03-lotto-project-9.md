@@ -69,6 +69,15 @@ def detail(request, lottokey): # perameter 'lottokey'를 함께 전달
 
 ## default.html 탬플릿 수정
 - post 템플릿으로 연결하는 버튼을  추가한다.
+
+```html
+{% raw %}
+<a href="{% url 'new_lotto'%}">
+  <span class="glyphicon glyphicon-plus btn btn-default"></span>
+</a>
+{% endraw %}
+```
+
 - 각 제목에 detail 링크를 추가한다.
 
 
@@ -79,6 +88,6 @@ def detail(request, lottokey): # perameter 'lottokey'를 함께 전달
   <a href="{% url 'new_lotto' %}"><span class="glyphicon glyphicon-plus btn btn-default"></span></a></h1>
 </div>
 
-<h2><a href="{% url 'lotto_detail' pk=lotto.pk %}">{{lotto.text}}</a></h2>
+<h2><a href="{% url 'lotto_detail' lottokey=lotto.pk  %}">{{lotto.text}}</a></h2>
 {% endraw %}
 ```
