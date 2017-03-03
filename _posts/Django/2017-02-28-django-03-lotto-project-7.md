@@ -28,6 +28,8 @@ url(r'^$', views.index, name = 'index'),
 models 오브젝트의 GuessNumbers 클래스를 import 하고, 데이터를 불러온다.    
 불러온 데이터를 템플릿에 딕셔너리 형식으로 전달한다.
 
+- `lottos = GuessNumbers.objects.order_by(‘-update_date’)` 를 통해 작성일 기준 내림차순으로 데이터를 가져올 수 있다.
+
 ```python
 {% raw %}
 

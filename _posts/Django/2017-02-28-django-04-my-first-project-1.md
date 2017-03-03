@@ -10,17 +10,15 @@ comments: true
 
 ## 장고 프로젝트 준비
 
-1. 가상환경(virtualenv) 설치 및 장고 설치
-2. 프로젝트 및 app 생성 (setting.py 수정)
+- 가상환경(virtualenv) 설치 및 장고 설치
+- 프로젝트 및 app 생성 (setting.py 수정)
 
 
 ## Model 클래스 작성
 > DB 연동을 위한 model class를 작성한다.
 
-3. 모델 내에 모델 클래스 작성 (models.py)후, 장고에 migrate - DB 테이블과 유사
-4. admin superuser 등록 후, admin.py에 모델 클래스 등록
-
-
+- 모델 내에 모델 클래스 작성 (models.py)후, 장고에 migrate - DB 테이블과 유사
+- admin superuser 등록 후, admin.py에 모델 클래스 등록
 - 장고 가이드 문서 [Model field reference](https://docs.djangoproject.com/en/1.10/ref/models/fields/#model-field-types) 를 통해 model field의  data type, optiond 을 참고할 수 있다.
 - models.py 에 모델 클래스 작성 후, 장고에게 모델을 만들었다는 걸 알려줘야 한다.
 
@@ -36,34 +34,56 @@ def __str__(self):
       return '%s by %s' % (self.title, self.name)
 ```
 
+- 작성 시간은 `timezone 모듈`을 사용한다. (models.py 코드예시)
+
+```python
+from django.db import models
+from django.utils import timezone
+
+# Create your models here.
+class Memos(models.Model):
+    name = models.CharField(max_length = 20, db_column='이름')
+    title = models.CharField(max_length = 50, db_column='제목')
+    text = models.TextField(max_length = 150, db_column='내용', help_text='메모 내용은 150자 이내로 입력 가능합니다.')
+    update_date = models.DateTimeField()
+    priority = models.BooleanField(db_column='중요')
+
+    def generate(self):
+        self.update_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return '%s by %s' % (self.title, self.name)
+```
+
 ## 테스트 코드 작성
 > 모델 클래스의 메소드를 테스트 해본다.
 
-5. test.py 작성 후 터미널에서 실행
+- test.py 작성 후 터미널에서 실행
 
 - test.py 작성내용
 - test.py 실행방법 : $ python manage.py test
 
 ## views와 템플릿, 템플릿과 정적파일 연동
 
-6. 템플릿 폴더 및 html 파일 작성 후, views와 연동
-7. 템플릿 html 파일과 static css 파일 연동
-8. static 파일 작성 후 장고에게 알려준다 - collectstatic
+- 템플릿 폴더 및 html 파일 작성 후, views와 연동
+- 템플릿 html 파일과 static css 파일 연동
+- static 파일 작성 후 장고에게 알려준다 - collectstatic
 
 - 템플릿 파일(html) 경로 : memo_app/template/memo_app/default.html
 - 정적 파일(css) 경로 : memo_app/static/css/default-style.css
 
 ## MTV 연동하기
-9. view에 model 클래스를 import 하고 데이터 불러오기
-10. view에서 불러온 model 클래스 데이터를 template파일에 for문으로 적용하기
+- view에 model 클래스를 import 하고 데이터 불러오기
+- view에서 불러온 model 클래스 데이터를 template파일에 for문으로 적용하기
 
-## form 만들기, post 처리
-11. app 폴더 내부에 forms.py 작성, 모델 클래스 추가
-12. form.html 템플릿 작성
-13. urls.py 추가 후에 view 와 연결(forms.py 데이터 가져오기), view와 템플릿 연결
-14. post 분기 처리를 위한 views.py 수정
+## 입력 - form 만들기, post 처리
+- app 폴더 내부에 forms.py 작성, 모델 클래스 추가
+- form.html 템플릿 작성
+- urls.py 추가 후에 view 와 연결(forms.py 데이터 가져오기), view와 템플릿 연결
+- post 분기 처리를 위한 views.py 수정
 
-## modify 처리
+## 수정 - modify 처리
 > 가이드 문서 찾아보고 적용 하느라 오래걸렸다..ㅠㅠ 조만간 이런때도 있었지 하고 추억하는 날이 오겠지!
 
 ### url 패턴 추가 (urls.py)
@@ -119,7 +139,7 @@ def modify(request, memokey): #memokey 변수를 url에서 가져온다
 {% endraw %}
 ```
 
-## delete 처리
+## 삭제 - delete 처리
 ### url 패턴 추가 (urls.py)
 > primary key를 url 일부분으로 갖는 url 패턴 추가
 
@@ -140,7 +160,7 @@ def delete(request, memokey):
 ```
 
 ### 각 데이터의 primary key를 url로 받도록 처리
-### 삭제버튼 클릭시 confirm 결과에 따라 submit을 취소 할 수 있다.
+> 삭제버튼 클릭시 confirm 결과에 따라 submit을 취소 할 수 있다.
 
 ```html
 {% raw %}

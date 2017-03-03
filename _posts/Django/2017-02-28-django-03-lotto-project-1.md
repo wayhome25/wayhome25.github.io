@@ -83,3 +83,10 @@ $ python manage.py runserver
 Starting development server at http://127.0.0.1:8000/
 
 ```
+
+- 서버 실행시 `Error: That port is already in use.` 에러가 발생하는 경우,    
+  아래 명령어를 통해서 해결할 수 있다. [참고](http://stackoverflow.com/questions/20239232/error-that-port-is-already-in-use)
+
+```shell
+$ sudo lsof -t -i tcp:8000 | xargs kill -9
+```

@@ -25,8 +25,7 @@ $ python manage.py migrate
 
 ```python
 from django.db import models
-# from django.utils import timezone # 현재시간이 정상 동작 하지 않음
-import datetime
+from djang.utils import timezone
 import random
 
 # Create your models here.
@@ -47,7 +46,7 @@ class GuessNumbers(models.Model): #슈퍼클래스 models의 하위클래스 Mod
             guess = origin[:6] #index번호 0부터 5 까지를 뽑아낸다.
             guess.sort()
             self.lottos += str(guess) + '\n'
-        self.update_date = datetime.datetime.now()
+        self.update_date = timezone.now()
         self.save() # 오브젝트를 db에 저장
 ```
 
