@@ -41,7 +41,7 @@ nav:
   Categories:
     - '/'
     # - { Categories All: '/blog/categories/' }
-    - { TIL(Today I Learned): '/blog/categories/#til' }
+    - { TIL (Today I Learned): '/blog/categories/#til' }
     - { Django: '/blog/categories/#django' }
     - { python: '/blog/categories/#python' }
     - { javascript: '/blog/categories/#javascript' }
