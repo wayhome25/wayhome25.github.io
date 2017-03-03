@@ -18,6 +18,9 @@ comments: true
 
 ```
 ------------------->
+
+추가 내용은 [구글독스](https://docs.google.com/spreadsheets/d/1T91SzL2NgWiMOK99CAlJJSDvciCzlYhWMvNMlOXtIG4/edit#gid=0)에 정리
+
 # [내장함수 (built-in function)](https://wikidocs.net/32)
 > 파이썬 내장 함수들은 외부 모듈과는 달리 import를 필요로 하지 않는다.
 
