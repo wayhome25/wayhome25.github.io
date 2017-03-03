@@ -33,7 +33,7 @@ title: About
 
 ## 만들어 본 것
 
-- 첫번쨰 Django 프로젝트 [simple 메모장](http://siwabada.pythonanywhere.com/)
+- 첫번째 Django 프로젝트 [simple 메모장](http://siwabada.pythonanywhere.com/)
   - python, django, javascript, bootstrap,pythonanywhere
 - 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
   - mysql, php, javascript, bitnami, html, css, bootstrap  
