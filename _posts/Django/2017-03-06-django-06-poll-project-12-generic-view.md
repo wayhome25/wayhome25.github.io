@@ -11,6 +11,7 @@ comments: true
 ## Class-based View
 
 ### Class-based View 특징 - function based view 와의 차이점
+- [class-based view 가이드 문서](https://docs.djangoproject.com/en/1.10/topics/class-based-views/)
 - GET, POST 와 같은 HTTP 메소드를 별도의 파이썬 메소드로 처리 (가독성이 높아짐)
 - 객체 지향의 장점을 적용 가능 (재사용성, Mixin 등)
 - 복잡한 구현을 가능하게 해줌
@@ -38,7 +39,7 @@ comments: true
     url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
 ```
-- `주의사항`: generic view를 위해서는 매개변수 이름이 `pk`여야 합니다.
+- `주의사항`: generic view를 위해서는 매개변수 이름이 `pk`여야 한다.
 
 ---
 - views.py 수정

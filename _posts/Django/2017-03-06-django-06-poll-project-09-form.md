@@ -12,7 +12,16 @@ comments: true
 - 지난번 실습에서는 form 클래스(form.py)를 사용해서 form을 작성했으나, 이번에는 2개의 모델을 갖고 (Question, Choice) custom form을 작성한다.
 - form 안에는 보안을 위해서 `csrf_token`을 무조건 넣어준다.
 - input 의 name 값은 post의 dictionary 처럼 사용 할 수 있다.
-- `forloop.counter`를 통해서 반복하면서 하나씨 증가하는 임의의 숫자를 추가할 수 있다. (1부터 시작)
+- `forloop.counter`를 통해서 반복하면서 하나씩 증가하는 임의의 숫자를 추가할 수 있다. (1부터 시작)
+
+### views.py 내의 DetailView 클래스
+
+```python
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+```
+### detail.html 템플릿 코드
 
 ```html
 {% raw %}
@@ -32,7 +41,7 @@ comments: true
 {% endraw %}
 ```
 
-- 랜더링된 detail.html 코드
+### 랜더링된 detail.html 코드
 
 ```html
 {% raw %}
