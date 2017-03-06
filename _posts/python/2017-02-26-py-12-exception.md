@@ -29,6 +29,13 @@ ValueError: invalid literal for int() with base 10: 'abc'
 - 에러가 발생할 것 같은 코드를 try안에 넣고 except 뒤에 발생할 수 있는 에러의 이름을 적어두면,
   에러 발생시 `프로그램이 멈추지 않고` 별도 처리가 가능하다.
 
+<center>
+<figure>
+<img src="/assets/post-img/python/exception.png" alt="views">
+<figcaption>exception 처리</figcaption>
+</figure>
+</center>
+
 ```python
 text = '100%'
 
