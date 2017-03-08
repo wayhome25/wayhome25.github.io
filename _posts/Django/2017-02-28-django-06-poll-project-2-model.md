@@ -39,7 +39,7 @@ class Question(models.Model): # 항상 Model 클래스를 상속받는다
 
 class Choice(models.Model):
     # 질문을 삭제 했을 떄 연관 항목을 어떻게 할지 설정 - 자동 삭제
-    question = models.foreignKey(Question, on_delete = models.CASCADE)
+    question = models.ForeignKey(Question, on_delete = models.CASCADE)
     choice_text = models.CharField(max_length = 200)
     votes = models.IntegerField(default = 0)
 ```

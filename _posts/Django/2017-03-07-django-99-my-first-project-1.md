@@ -9,7 +9,7 @@ comments: true
 > 첫 장고 개인 프로젝트 진행 중 새롭게 배운 부분을 정리하였습니다.
 
 ## 결과물
-- http://siwabada.pythonanywhere.com/
+- <http://siwabada.pythonanywhere.com/>
 
 ## 느낀점
 
