@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 짝수와 홀수
+title: level 1. 짝수와 홀수 - 삼항연산자
 category: 알고리즘 문제풀이
 tags: [알고리즘, 프로그래밍]
 comments: true
