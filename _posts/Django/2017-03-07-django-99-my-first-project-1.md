@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 04. 장고 개인 프로젝트 (메모 앱) - 개발과정 기록   
+title: django 04. 장고 개인 프로젝트 1 - 개발과정 기록   
 category: Django
 tags: [python, 파이썬, Django, 템플릿]
 comments: true

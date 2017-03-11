@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 04. 장고 개인 프로젝트 (메모 앱) - 자신의 글만 수정, 삭제 가능하도록 만들기
+title: django 04. 장고 개인 프로젝트 3 - 자신의 글만 수정, 삭제 가능하도록 만들기
 category: Django
 tags: [python, 파이썬, Django, 인증]
 comments: true

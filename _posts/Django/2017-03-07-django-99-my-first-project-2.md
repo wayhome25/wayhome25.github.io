@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 04. 장고 개인 프로젝트 (메모 앱) - 인증 (회원가입, 로그인)
+title: django 04. 장고 개인 프로젝트 2 - 인증 (회원가입, 로그인)
 category: Django
 tags: [python, 파이썬, Django, 인증]
 comments: true

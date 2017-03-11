@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 04. 장고 개인 프로젝트 (메모 앱) - 좋아요 버튼, ajax 통신
+title: django 04. 장고 개인 프로젝트 4 - 좋아요 버튼, ajax 통신
 category: Django
 tags: [python, 파이썬, Django, 인증]
 comments: true
