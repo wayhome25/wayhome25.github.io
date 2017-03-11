@@ -10,6 +10,7 @@ comments: true
 
 
 ## 학습
+- [프로그래밍 입문자를 위한 몇 가지 조언 - 한날](http://blog.hannal.com/2016/01/how-to-study-programming/)
 - [다양한 학습 사이트들](https://github.com/honux77/practice/wiki/learn)
 - [어려운 것을 쉽게 배우는 방법](http://www.moreagile.net/2016/02/learning-new-stuff.html)
   - 1단계 : 일단 만들기, 샘플코드 쌓기, 반복, 무엇을 모르는지 파악하기,

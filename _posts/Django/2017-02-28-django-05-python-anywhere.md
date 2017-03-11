@@ -41,13 +41,13 @@ $ python manage.py migrate
 $ python manage.py createsuperuser
 ```
 
-## web - virtualenv 설정
+## web 메뉴 - virtualenv 설정
 ```
 /home/<your-username>/<your-project-folder>/
 ```
 
 
-## web - WSGI 설정
+## web 메뉴 - WSGI 설정
 ```
 import os
 import sys
@@ -87,8 +87,30 @@ print(SECRET_KEY)
 ```
 
 ## settings.py 수정
+- bash에서 vi settings.py 입력후 아래 SECRET_KEY 내용을 genkey.py로 생성한 내용으로 대체
+
 ```
 DEBUG=False
 ALLOWED_HOST=[honux.pythonanywhere.com]
 SECRET_KEY= '....'
 ```
+
+----
+
+# 배포 후, 수정사항 pythonanywhere에 반영하기
+
+## git pull
+- 사이트내 [Your consoles](https://www.pythonanywhere.com/user/siwabada/consoles/) bash 실행
+- virtualenv 가 실행되어 있는지 확인
+- 프로젝트 상위 폴더에서 git pull 실행
+```shell
+$ git pull origin master
+```
+- 오류 발생시 `git stash` 등으로 해결 후, 아래 절차대로 진행
+- `python manage.py collectstatic`
+- `python manage.py makemigrations`
+- `python manage.py migrate`
+
+## Reload
+- web 메뉴에서 Reload 버튼을 선택하여 동기화
+- 사이트에서 반영사항 확인

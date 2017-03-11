@@ -10,7 +10,6 @@ comments: true
 
 ## 결과물
 - <http://siwabada.pythonanywhere.com/>
-
 - [Using the Django authentication system](https://docs.djangoproject.com/en/1.10/topics/auth/default/)
 - [ModelForm](https://docs.djangoproject.com/en/dev/topics/forms/modelforms/#modelform)
 - [How to log a user in](https://docs.djangoproject.com/en/1.10/topics/auth/default/#how-to-log-a-user-in)
@@ -18,6 +17,7 @@ comments: true
 - [Taking User Input to create Users in Django](http://stackoverflow.com/questions/11287485/taking-user-input-to-create-users-in-django)
 - [Authentication Views](https://docs.djangoproject.com/en/1.10/topics/auth/default/#module-django.contrib.auth.views)
 - [로그인, 로그아웃 하기](http://blog.hannal.com/2015/06/start_with_django_webframework_08/)
+
 -------
 
 # 회원가입
