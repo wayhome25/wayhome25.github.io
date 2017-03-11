@@ -4,10 +4,10 @@ title: About
 ---
 
 <p class="message">
-  웹개발 입문자, 초보 <br>
-  강의를 듣고 공부한 내용을 정리하는 블로그 <br>
+  개발 입문자, 초보 <br>
+  공부한 내용을 정리하는 블로그 <br>
   <!-- <a href="https://opentutorials.org/course/1189/14118">보편적이지 않은 코딩</a>을 하는중 -->
-  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필 - 구직중</a>
+  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
 
 ## 공부한 것
@@ -33,8 +33,8 @@ title: About
 
 ## 만들어 본 것
 
-- 첫번째 Django 프로젝트 [simple 메모장](http://siwabada.pythonanywhere.com/)
-  - python, django, javascript, bootstrap,pythonanywhere
+- [첫번째 Django 프로젝트](http://siwabada.pythonanywhere.com/) (계속 업데이트 중)
+  - python, django, javascript, bootstrap, pythonanywhere
 - 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
   - mysql, php, javascript, bitnami, html, css, bootstrap  
 - firebase 연습을 위해서 만든 [simple to-do list](https://simple-todolist.firebaseapp.com/)
