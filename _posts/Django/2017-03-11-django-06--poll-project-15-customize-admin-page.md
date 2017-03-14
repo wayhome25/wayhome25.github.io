@@ -5,7 +5,8 @@ category: Django
 tags: [python, 파이썬, Django, 인증]
 comments: true
 ---
-# django 04. 두번째 장고앱 15 - admin page customize
+> [파이썬 웹 프로그래밍 - Django로 웹 서비스 개발하기 ](https://www.inflearn.com/course/django-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%A5%EA%B3%A0-%EA%B0%95%EC%A2%8C/)
+
 > 장고의 admin 페이지를 필요에 따라 수정한다.
 
 ## admin.py 수정

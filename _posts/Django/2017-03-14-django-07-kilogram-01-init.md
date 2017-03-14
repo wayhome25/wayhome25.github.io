@@ -5,6 +5,8 @@ category: Django
 tags: [python, 파이썬, Django]
 comments: true
 ---
+> [파이썬 웹 프로그래밍 - Django로 웹 서비스 개발하기 ](https://www.inflearn.com/course/django-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%A5%EA%B3%A0-%EA%B0%95%EC%A2%8C/)
+
 > 세번째 장고앱 '킬로그램'을 시작하기 위한 기본 설정 및 프로젝트 초기화를 진행한다.
 
 # 기획
