@@ -5,12 +5,13 @@ category: Django
 tags: [python, 파이썬, Django]
 comments: true
 ---
-# django 04. 두번째 장고앱 16 - 정적파일, 템플릿 확장, 어드민 템플릿 변경
 > static 파일관리와 템플릿 확장에 대해서 알아본다.
 
 ## 참고문서
 
 - [가이드문서](https://docs.djangoproject.com/en/1.10/howto/static-files/)
+
+# 정적파일
 
 ## css 파일 만들기
 
@@ -51,7 +52,7 @@ $ python manage.py collectstatic
 
 ---------
 
-# custom admin template
+# 어드민 템플릿 변경
 
 ## settings.py 수정
 

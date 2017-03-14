@@ -25,6 +25,10 @@ comments: true
 ## 네트워크
 - [책] [그림으로 배우는 HTTP & Network Basic](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788931447897)
 
+- [강의] [KHAN 아카데미 인터넷입문](https://ko.khanacademy.org/computing/computer-science/internet-intro#internet-works-intro)
+
+## 알고리즘
+- [강의] [KHAN 아카데미 알고리즘](https://ko.khanacademy.org/computing/computer-science/algorithms)
 
 ## 기타
 - [강의] [Git - CLI기반](https://opentutorials.org/course/2708/15242)

@@ -74,8 +74,8 @@ $ python manage.py startapp mylotto
 
 <!-- 8. setting.py 등록 -->
 INSTALLED_APPS = [
+    'mylotto',  /*admin 위에 등록해야한다*/
     .....
-    'mylotto',
 ]
 
 <!-- 9. 서버 실행 -->
