@@ -138,6 +138,36 @@ $ python manage.py shell
 {% endraw %}
 ```
 
+### (참고) login.html 템플릿에서 로그인 폼 커스터마이징
+
+- registration/login.html에서 사용하는 내장된 로그인 폼 (위 코드에서 form.as_p 로 사용한)을 커스터마이징 할 수 있다.
+- [참고문서](https://docs.djangoproject.com/en/1.10/topics/forms/#rendering-fields-manually)
+
+
+```html
+{% raw %}
+<form method="POST" action="{% url 'login' %}" class="sign-in-form">
+  {% csrf_token %}
+  <h2 class="sub-title"> 로그인 </h2>
+  <!-- <input type="hidden" name="next" value="">
+  {{form.as_p}} >> 기본으로 내장된 로그인 폼을 아래와 같이 커스터마이징 한다-->
+  <div class="form-group">
+    <label for="{{ form.username.id_for_label }}">닉네임</label>
+    <input class="form-control" id="{{ form.username.id_for_label }}" maxlength="15" name="{{ form.username.html_name }}" type="text" />
+  </div>
+  <div class="form-group">
+    <label for="{{ form.password.id_for_label }}">패스워드</label>
+    <input class="form-control" id="{{ form.password.id_for_label }}" maxlength="120" name="{{ form.password.html_name }}" type="password" />
+  </div>
+  <input type="submit" class="save btn btn-success" value="로그인">
+  <a href="{% url 'index' %}">
+    <button type="button" class="btn btn-danger">취소</button>
+  </a>
+  <input type="hidden" name="next" value="">
+</form>
+{% endraw %}
+```
+
 ## settings.py 수정
 
 - 로그인후 리다이렉트 페이지는 기본적으로 /accounts/profile 로 지정되어 있는데 이를 변경한다.
@@ -147,6 +177,8 @@ $ python manage.py shell
 # Auth settings
 LOGIN_REDIRECT_URL = '/kilogram/'
 ```
+
+
 
 
 ## 로그아웃용 template 만들기
