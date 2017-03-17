@@ -46,6 +46,7 @@ nav:
     - { python: '/blog/categories/#python' }
     - { javascript: '/blog/categories/#javascript' }
     - { nodejs: '/blog/categories/#nodejs' }
+    - { MySQL: '/blog/categories/#MySQL' }
     - { firebase: '/blog/categories/#firebase' }
     - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
     - { etc: '/blog/categories/#etc' }
