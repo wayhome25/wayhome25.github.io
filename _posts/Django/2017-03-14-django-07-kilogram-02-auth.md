@@ -72,6 +72,7 @@ login 관련 기능에는 별도로 view를 작성할 필요 없이 `템플릿�
 - 로그인과 로그아웃에 사용할 템플릿을 만든다.
 - 경로와 이름이 이미 정해져 있는데 로그인은 만들지 않으면 에러가 발생하고, 로그 아웃은 관리자용 페이지를 사용한다.(둘 다 모두 직접 만들어 주는 것이 좋다.)
 
+
 ### base.html 수정
 
 - `로그인 및 로그아웃 링크를 추가` 한다.
@@ -180,11 +181,11 @@ LOGIN_REDIRECT_URL = '/kilogram/'
 
 
 
-
 ## 로그아웃용 template 만들기
 
 - 파일경로 : registration/logged_out.html (내장된 인증모델의 로그아웃 템플릿의 경로는 해당 경로와 파일명으로 지정되어 있다.)
 - 템플릿 이름이 다르면 안된다. 파일이름은 장고 소스의 auth.views.logout()을 보시면 확인할 수 있다.
+- settings.py 에서 `INSTALLED_APPS` 내용 중 app 파일이 admin 파일보다 위에 와야한다. 그렇지 않으면 템플릿 파일 override가 동작하지 않는다.
 
 ```html
 {% raw %}
@@ -197,6 +198,19 @@ LOGIN_REDIRECT_URL = '/kilogram/'
 
 {% endblock %}
 {% endraw %}
+```
+
+## 로그아웃 후 바로 홈으로 보내기
+- 내장된 인증 관련 views를 활용하여 별도의 로그인 템플릿 지정 및 로그아웃 후 바로 홈으로 리다이렉트가 가능하다. 
+- urls.py
+
+```python
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+url(r'^logout/$', auth_views.logout, {'next_page' : '/'}),
+url(r'^login/$', auth_views.login,  {'template_name':'memo_app/login.html'}),
+]
 ```
 
 ## 참고 링크
