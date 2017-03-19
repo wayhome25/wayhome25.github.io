@@ -32,6 +32,13 @@ comments: true
 - `Model` : Model 오브젝트는 DB 조작을 쉽게 해준다. ORM (Object Relational Model)
 - `DB` : Data 저장소, persistent 하게 데이터를 읽고, 쓰는데 Model을 사용한다.
 
+<center>
+ <figure>
+ <img src="/assets/post-img/django/django_overview.png" alt="views">
+ <figcaption></figcaption>
+ </figure>
+ </center>
+- 참고자료출처 : [AskDjango](https://nomade.kr/vod/django/53/)
 
 ## 프로젝트 및 앱 생성
 1. 프로젝트용 가상환경 (virtualenv) 설치

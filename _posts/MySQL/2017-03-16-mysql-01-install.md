@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL 01. MySQL 설치 및 환경설정
-category: Django
+category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL 02. MySQL Client - mysql monitor 기본
-category: Django
+category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true
 ---

@@ -4,8 +4,9 @@ title: About
 ---
 
 <p class="message">
-  개발 입문자, 초보 <br>
-  공부한 내용을 정리하는 블로그 <br>
+  개발 입문자, 초보에요. <br>
+  공부한 내용을 정리하는 블로그입니다. :) <br>
+
   <!-- <a href="https://opentutorials.org/course/1189/14118">보편적이지 않은 코딩</a>을 하는중 -->
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
@@ -13,6 +14,7 @@ title: About
 ## 공부한 것
 
 - Django
+  - [AskDjango - 장고 기본편 (이진석)](https://nomade.kr/vod/django/)
   - [파이썬 웹 프로그래밍 – Django로 웹 서비스 개발하기 (정호영)](https://www.inflearn.com/members/hyunjoo_lee_1/course/)
 
 - python
@@ -35,9 +37,11 @@ title: About
 
 - [첫번째 Django 프로젝트](http://siwabada.pythonanywhere.com/) (계속 업데이트 중)
   - python, django, javascript, bootstrap, pythonanywhere
-- 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
-  - mysql, php, javascript, bitnami, html, css, bootstrap  
 - firebase 연습을 위해서 만든 [simple to-do list](https://simple-todolist.firebaseapp.com/)
   - firebase, javascript, html, css, materialize ui framework
 - 프론트엔드 [연습목록](https://wayhome25.github.io/front-end/index.html)
   - html, css, sass, javascript
+
+
+  <!-- - 영어공부 이력 남기려고 만든 [간단 게시판](http://siwabada.dothome.co.kr/)
+    - mysql, php, javascript, bitnami, html, css, bootstrap   -->
