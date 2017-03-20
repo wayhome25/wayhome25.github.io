@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 03. MySQL - Table
+title: MySQL 04. MySQL - Table (작성, 필드타입)
 category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true
@@ -16,7 +16,7 @@ comments: true
 -----
 # 테이블 관리 - mysql monitor
 - phpMyAdmin를 통해서도 같은 작업을 수행 할 수 있다.
-- 초심자는 GUI환경에서 먼저 연습하고 sql문에 점점 익숙해지는 편이 좋다. 
+- 초심자는 GUI환경에서 먼저 연습하고 sql문에 점점 익숙해지는 편이 좋다.
 
 ## 테이블 생성
 - GUI 환경에서 테이블을 생성하는 경우가 많음
