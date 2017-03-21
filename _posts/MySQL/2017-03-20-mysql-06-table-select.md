@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 06. MySQL - Table (조회1)
+title: MySQL 06. MySQL - Table (조회1 select, limit, where)
 category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true
@@ -17,6 +17,7 @@ comments: true
 
 ```shell
 # 문법
+# 중복 사용시 순서가 중요하다.
 SELECT 칼럼명1, 칼럼명2
       [FROM 테이블명 ] # 생략가능
       [GROUP BY 칼럼명] # 생략가능
