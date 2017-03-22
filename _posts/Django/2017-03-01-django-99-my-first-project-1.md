@@ -11,7 +11,6 @@ comments: true
 ## 결과물
 - <http://siwabada.pythonanywhere.com/>
 
-## 느낀점
 
 ## 장고 프로젝트 준비
 
@@ -61,20 +60,13 @@ class Memos(models.Model):
         return '%s by %s' % (self.title, self.name)
 ```
 
-## 테스트 코드 작성
-> 모델 클래스의 메소드를 테스트 해본다.
 
-- test.py 작성 후 터미널에서 실행
-
-- test.py 작성내용
-- test.py 실행방법 : $ python manage.py test
 
 ## views와 템플릿, 템플릿과 정적파일 연동
 
 - 템플릿 폴더 및 html 파일 작성 후, views와 연동
 - 템플릿 html 파일과 static css 파일 연동
 - static 파일 작성 후 장고에게 알려준다 - collectstatic
-
 - 템플릿 파일(html) 경로 : memo_app/template/memo_app/default.html
 - 정적 파일(css) 경로 : memo_app/static/css/default-style.css
 
