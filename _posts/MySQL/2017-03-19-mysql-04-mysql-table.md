@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 04. MySQL - Table (작성, 필드타입)
+title: MySQL 04. MySQL - Table (create, 필드타입)
 category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true

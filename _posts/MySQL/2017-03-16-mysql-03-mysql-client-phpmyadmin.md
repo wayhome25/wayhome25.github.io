@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 03. MySQL - 데이터관리 SQL 참고자료, phpmyadmin
+title: MySQL 03. MySQL - DB생성, phpmyadmin
 category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true

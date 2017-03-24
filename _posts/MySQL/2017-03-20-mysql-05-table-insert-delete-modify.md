@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 05. MySQL - Table (삽입, 변경, 삭제)
+title: MySQL 05. MySQL - Table (insert, update, delete)
 category: MySQL
 tags: [MySQL, 데이터베이스]
 comments: true
