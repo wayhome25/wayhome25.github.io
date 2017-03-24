@@ -1,14 +1,16 @@
 ---
 layout: post
-title: ComputerScience 01. 우분투(ubuntu) 설치
-category: ComputerScience
+title: 컴퓨터공학 01. 우분투(ubuntu) 설치
+category: 컴퓨터공학
+permalink: /cs/:year/:month/:day/:title/
 tags: [MySQL, 데이터베이스]
 comments: true
 ---
 # 우분투(ubuntu)
 - Debian GNU/Linux에 기초한 컴퓨터 운영체제로, `리눅스 배포판`이다.
 - 데비안 GNU/리눅스와 견주어 볼 때 사용자 편의성에 많은 초점을 맞추고 있다.
-- 일반적으로 우분투 운영 체제 사용자들 사이에서, 우분투는 반투어로 __"네가 있으니 내가 있다"__ 라는 의미로 사용되고 있다.
+- 일반적으로 우분투 운영 체제 사용자들 사이에서,
+  우분투는 반투어로 __네가 있으니 내가 있다__ 라는 의미로 사용되고 있다.
 
 ---
 

@@ -2,6 +2,8 @@
 layout: post
 title: level 1. x만큼 간격이 있는 n개의 숫자
 category: 알고리즘 문제풀이
+permalink: /algorithm/:year/:month/:day/:title/
+
 tags: [알고리즘, 프로그래밍]
 comments: true
 ---
@@ -30,4 +32,3 @@ def number_generator(x, n):
 # 아래는 테스트로 출력해 보기 위한 코드입니다.
 print(number_generator(3,5))
 ```
- 

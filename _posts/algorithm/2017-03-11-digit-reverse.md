@@ -2,6 +2,8 @@
 layout: post
 title: level 2. 자연수를 뒤집어 리스트로 만들기
 category: 알고리즘 문제풀이
+permalink: /algorithm/:year/:month/:day/:title/
+
 tags: [알고리즘, 프로그래밍]
 comments: true
 ---

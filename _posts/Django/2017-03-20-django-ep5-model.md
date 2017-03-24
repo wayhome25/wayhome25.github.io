@@ -84,6 +84,7 @@ admin.site.register(Post)
   - 예 : 이메일만 받기, 최대길이 제한, 최소길이 제한, 최대값 제한, 최소값 제한 등
 - choices (form widget 용) : select box 소스로 사용
 - help_text (form widget 용) : 필드 입력 도움말  
+- auto_now_add : Bool, True 인 경우, 레코드 생성시 현재 시간으로 자동 저장
 
 ## 커스텀 모델 예시
 - max_length, verbose_name 등 주요 필드 옵션을 적용하였다.
