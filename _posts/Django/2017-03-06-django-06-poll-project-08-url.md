@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 06. 두번째 장고앱 8 - 하드코딩 URL 제거
+title: django 06. 두번째 장고앱 8 - 하드코딩 URL 제거, namespace, app_name
 category: Django
 tags: [python, 파이썬, Django, template]
 comments: true
@@ -32,11 +32,16 @@ comments: true
 ## 네임스페이스
 - url의 name 값을 사용하다 보면 이름이 중복되는 문제가 발생할 수 있다.
 - 중복을 방지하기 위해서 `app_name` 이라는 url 네임스페이스를 사용할 수 있다.
-- urls.py 코드 예시
+- 네임스페이스 예시
 
 ```python
+# myapp/urls.py
 app_name = 'polls' #url 네임 스페이스
+
+# mysite/urls.py
+url(r'^video/', include('video.urls', namespace='video'))
 ```
+
 - index.html 의 링크 name 값에도 `polls:detail` 처럼 네임 스페이스를 함께 적어야 한다. (`중요 : 띄어쓰기 없음`)
 
 ```html
