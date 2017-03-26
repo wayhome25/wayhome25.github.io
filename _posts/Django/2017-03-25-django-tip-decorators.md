@@ -19,3 +19,5 @@ from django.contrib.auth.decorators import login_required
 def post_new(request):
     [...
 ```
+
+만약 로그인 하지 않은 사용자가 해당 view에 접근하는 경우, django는 자동으로 로그인 화면으로 연결한다.
