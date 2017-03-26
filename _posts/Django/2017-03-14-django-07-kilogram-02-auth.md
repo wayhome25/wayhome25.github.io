@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django 07. 세번째 장고앱 02 - 로그인, 로그아웃 구현하기
+title: django 07. 세번째 장고앱 02 - 로그인, 로그아웃, form 커스터마이징
 category: Django
 tags: [python, 파이썬, Django]
 comments: true
@@ -201,7 +201,7 @@ LOGIN_REDIRECT_URL = '/kilogram/'
 ```
 
 ## 로그아웃 후 바로 홈으로 보내기
-- 내장된 인증 관련 views를 활용하여 별도의 로그인 템플릿 지정 및 로그아웃 후 바로 홈으로 리다이렉트가 가능하다. 
+- 내장된 인증 관련 views를 활용하여 별도의 로그인 템플릿 지정 및 로그아웃 후 바로 홈으로 리다이렉트가 가능하다.
 - urls.py
 
 ```python
