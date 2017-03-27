@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 컴퓨터공학 01. 우분투(ubuntu) 설치
+title: 00. 우분투(ubuntu) 설치
 category: 컴퓨터공학
 permalink: /cs/:year/:month/:day/:title/
 tags: [MySQL, 데이터베이스]
