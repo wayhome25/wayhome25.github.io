@@ -64,7 +64,7 @@ from django.utils import timezone
 import datetime
 
 class Choice(models.Model):
-    # 질문을 삭제 했을 떄 연관 항목을 어떻게 할지 설정 - 자동 삭제
+    # 질문을 삭제 했을 때 연관 항목을 어떻게 할지 설정 - 자동 삭제
     question = models.ForeignKey(Question, on_delete = models.CASCADE)
     choice_text = models.CharField(max_length = 200)
     votes = models.IntegerField(default = 0)
@@ -81,7 +81,7 @@ class Choice(models.Model):
 ```
 >>> q
 <Question: 최고의 고기는?>
->>> q.choice_set.all() # 모델 설계시에 이미 연결을 했기 떄문에 choice_set이 존재한다.
+>>> q.choice_set.all() # 모델 설계시에 이미 연결을 했기 때문에 choice_set이 존재한다.
 <QuerySet []>
 >>> q.choice_set.create() #q(최고의 고기라는 데이터)에 연결된 choice 오브젝트 1개를 만든다.
 >>> q.choice_set.create(choice_text = '돼지')

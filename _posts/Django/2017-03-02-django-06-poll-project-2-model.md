@@ -38,7 +38,7 @@ class Question(models.Model): # 항상 Model 클래스를 상속받는다
     pub_date = models.DateTimeField('date published')
 
 class Choice(models.Model):
-    # 질문을 삭제 했을 떄 연관 항목을 어떻게 할지 설정 - 자동 삭제
+    # 질문을 삭제 했을 때 연관 항목을 어떻게 할지 설정 - 자동 삭제
     question = models.ForeignKey(Question, on_delete = models.CASCADE)
     choice_text = models.CharField(max_length = 200)
     votes = models.IntegerField(default = 0)

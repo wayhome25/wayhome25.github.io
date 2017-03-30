@@ -23,7 +23,7 @@ var express = require('express');
 var app = express();
 
 app.get('/',function(req, res){
-// 사용자가 root 디렉토리 (/)에 접속했을떄!
+// 사용자가 root 디렉토리 (/)에 접속했을때!
 // 여기서 get을 라우터라고 한다 (라우팅 : 길찾기)
 	res.send('hello siwa!');
 });

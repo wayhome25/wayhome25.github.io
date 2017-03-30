@@ -315,7 +315,7 @@ app.get(['/topic', '/topic/:id'], function(req, res) {
     }
     var id = req.params.id;
     if(id){
-      // id 값이 있을 떄
+      // id 값이 있을 때
       fs.readFile('data/'+id, 'utf8', function(err, data){
         if(err){
           console.log(err);
