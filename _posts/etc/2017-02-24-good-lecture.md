@@ -9,14 +9,17 @@ comments: true
 # 개발 공부에 도움되는 강의, 책
 
 ## 장고
+- [책] [Two Scoops of Django](https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966261840)
 - [강의] [인프런 - Django로 웹 서비스 개발하기(정호영)](https://www.inflearn.com/course/django-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%A5%EA%B3%A0-%EA%B0%95%EC%A2%8C/) : 장고 입문용으로 좋습니다.
 - [강의] [AskDjango - 장고기본편(강추)](https://nomade.kr/vod/django/) : 장고의 기본에 대해서 자세하게 설명합니다. 여러가지 꿀팁이 많습니다.
 - [강의] [장고걸스 튜토리얼, 난이도: 입문](https://tutorial.djangogirls.org/ko/django/)
 
 ## 파이썬
-- [책] [바이트 오브 파이썬 (입문, 강추)](http://byteofpython-korean.sourceforge.net/byte_of_python.html)  
+- [책] [파이썬 코딩의 기술](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9791186978825&orderClick=JAj)
+- [책] [파이썬을 이용한 클린 코드를 위한 테스트 주도 개발](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788994774916&orderClick=LAG&Kc=)
 - [책] [점프 투 파이썬](https://wikidocs.net/book/1) : 무료로 제공됩니다. 파이썬 문법에 대해서 아주 쉽게 설명합니다.
 - [강의] [파이썬 입문](http://tryhelloworld.co.kr/courses/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%AC%B8) : 실습을 하며 문법을 익히기 좋습니다.
+- [책] [바이트 오브 파이썬 (입문, 강추)](http://byteofpython-korean.sourceforge.net/byte_of_python.html)  
 
 
 ## 정규표현식
