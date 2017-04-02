@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django 기본 08 - 모델 queryset을 통한 CRUD, django-debug-toolbar
+title: Django 기본 08 - 모델 queryset을 통한 CRUD, django-debug-toolbar, requirements.txt
 category: Django
 tags: [python, Django, admin]
 comments: true

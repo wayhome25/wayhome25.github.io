@@ -43,7 +43,7 @@ $ python manage.py createsuperuser
 
 ## web 메뉴 - virtualenv 설정
 ```
-/home/<your-username>/<your-project-folder>/
+/home/<your-username>/your-env-name/
 ```
 
 
