@@ -8,7 +8,7 @@
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
         <a href="https://www.github.com/wayhome25">
-          <img src="/public/profile-pic.png" alt="profile picture" />
+          <img src="/public/profile.png" alt="profile picture" />
         </a>
       </div>
       <div class="sidebar-personal-info-section">
@@ -18,7 +18,7 @@
       {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}
       <div class="sidebar-personal-info-section">
-        <p> Follow me:
+        <p> Contact Me
         {% for contact in site.author.contact %}
         {% assign iconname = contact[0] %}
         {% if contact[0] == 'email' %}
@@ -30,6 +30,10 @@
         {% assign current_index = current_index | plus: 1 %}
         {% if current_index != len %}|{% endif %}
         {% endfor %}
+        <br>
+        <span class="notice">
+        글을 가져가실 때는 출처를 꼭 남겨주세요 :)
+        </span>
         </p>
       </div>
       {% endif %}
