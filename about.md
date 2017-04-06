@@ -5,10 +5,11 @@ title: About
 
 <p class="message">
   개발 입문자, 초보에요. <br>
-  공부한 내용을 정리하는 블로그입니다. :) <br>
-  편하게 댓글 남겨주세요! <br>
+  공부한 내용을 정리하는 블로그입니다.<br>
+  현재 패스트캠퍼스 컴퓨터공학 입문스쿨 과정에 참여하고 있습니다. (~17/04)<br>
+  소통은 환영합니다! 편하게 댓글 남겨주세요 :) <br>
   <!-- <a href="https://opentutorials.org/course/1189/14118">보편적이지 않은 코딩</a>을 하는중 -->
-  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
+  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필 (구직중)</a><br>
 </p>
 
 ## 공부한 것
@@ -39,10 +40,22 @@ title: About
 ## 만들어 본 것
 
 - [영어 스터디용 게시판](http://sunshinenglish.pythonanywhere.com/) (계속 업데이트 중)
-    - python, django, bootstrap, pythonanywhere
-- [첫번째 Django 프로젝트](http://siwabada.pythonanywhere.com/)
-  - python, django, javascript, bootstrap, pythonanywhere
+    - django의 기본적인 기능을 활용하여 영어 스터디에서 사용할 게시판을 만들었습니다.
+    - 인증기능 (로그인, 로그아웃)
+    - CRUD (글 추가, 조회, 갱신, 삭제)
+    - 댓글기능 (Many-to-one relationships)
+    - YouTube 동영상 링크를 받아서 iframe으로 추가 (정규표현식)
+    - python, django, bootstrap, pythonanywhere 활용
+
+- [첫번째 Django 프로젝트 메모 게시판](http://siwabada.pythonanywhere.com/)
+    - 인증기능 (회원가입, 로그인, 로그아웃)
+    - CRUD (글 추가, 조회, 갱신, 삭제)
+    - 좋아요 기능 (Many-to-one relationships, 비동기 ajax 통신)
+    - 정렬기능 (좋아요순, 최신순)
+    - python, django, javascript, bootstrap, pythonanywhere
+
 - firebase 연습을 위해서 만든 [simple to-do list](https://simple-todolist.firebaseapp.com/)
   - firebase, javascript, html, css, materialize ui framework
+
 - 프론트엔드 [연습목록](https://wayhome25.github.io/front-end/index.html)
   - html, css, sass, javascript
