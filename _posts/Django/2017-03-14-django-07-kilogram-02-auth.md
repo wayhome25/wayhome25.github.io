@@ -30,11 +30,13 @@ a {
 
 ## 로그인 구현순서
 - MVT 순서로 구현해 본다.
-
+- Model : django.contrib.auth.models.User 내장 클래스 사용
+- View : 내장 로그인 View 사용
+- Template : 간단하게 작성
 
 ## model
 
-- 장고의 `django.contrib.auth.models.User` 를 그대로 사용한다. (Full framework)
+- 장고의 `django.contrib.auth.models.User` 라는 클래스를 그대로 사용한다. (Full framework)
 - 특별한 코딩은 필요하지 않다.
 
 ## auth 관련 url 추가하기
@@ -93,7 +95,7 @@ login 관련 기능에는 별도로 view를 작성할 필요 없이 `템플릿�
 {% endraw %}
 ```
 
-### shell에서 로그인용 사용자 생성해 보기
+## shell에서 로그인용 사용자 생성해 보기
 
 - 완료 후 admin 툴을 이용해서 확인한다.
 - 템플릿 상에서도 로그인이 잘 되는지 확인한다.
@@ -103,6 +105,8 @@ login 관련 기능에는 별도로 view를 작성할 필요 없이 `템플릿�
 $ python manage.py shell
 >>> from django.contrib.auth.models import User
 >>> user = User.objects.create_user('chiken1', 'chiken1@out.org', 'pass5678')
+>>> user = User.objects.create_user(username = 'test1', email = 'na@na.com', password = '1234')
+>>> User.objects.all() # 전체 User 리스트 확인
 ```
 
 ### login.html 템플릿 작성
@@ -184,7 +188,7 @@ LOGIN_REDIRECT_URL = '/kilogram/'
 ## 로그아웃용 template 만들기
 
 - 파일경로 : registration/logged_out.html (내장된 인증모델의 로그아웃 템플릿의 경로는 해당 경로와 파일명으로 지정되어 있다.)
-- 템플릿 이름이 다르면 안된다. 파일이름은 장고 소스의 auth.views.logout()을 보시면 확인할 수 있다.
+- 템플릿 이름이 다르면 안된다. 파일이름은 장고 소스의 auth.views.logout()을 보면 확인할 수 있다. [참고](https://github.com/django/django/blob/master/django/contrib/auth/views.py)
 - settings.py 에서 `INSTALLED_APPS` 내용 중 app 파일이 admin 파일보다 위에 와야한다. 그렇지 않으면 템플릿 파일 override가 동작하지 않는다.
 
 ```html
