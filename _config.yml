@@ -42,13 +42,15 @@ nav:
     - '/'
     # - { Categories All: '/blog/categories/' }
     - { TIL (Today I Learned): '/blog/categories/#til' }
+    - { 컴퓨터 공학 : '/blog/categories/#컴퓨터공학' }
     - { Django: '/blog/categories/#django' }
     - { python: '/blog/categories/#python' }
     - { javascript: '/blog/categories/#javascript' }
     - { nodejs: '/blog/categories/#nodejs' }
     - { MySQL: '/blog/categories/#MySQL' }
-    - { firebase: '/blog/categories/#firebase' }
     - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
+    - { git: '/blog/categories/#git' }
+    - { firebase: '/blog/categories/#firebase' }
     - { etc: '/blog/categories/#etc' }
     # - { Tags: '/blog/tags/' }
   About:
