@@ -6,6 +6,26 @@ title: Home
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- jquery 추가 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .category-title{
+        cursor: pointer;
+      }
+      .category-title:hover > h2{
+        text-decoration: underline;
+      }
+      .tags-expo-posts{
+        display: block;
+      }
+
+      #알고리즘-문제풀이 + .tags-expo-posts,
+      #til-today-i-learned + .tags-expo-posts{
+        display: none
+      }
+
+      </style>
+
   </head>
   <body>
     <div class="tags-expo">
@@ -17,13 +37,13 @@ title: Home
       <hr/>
       <div class="tags-expo-section">
         {% for tag in site.categories %}
-        <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+        <a class="category-title"><h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2></a>
         <ul class="tags-expo-posts">
           {% for post in tag[1] %}
             <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
             {{ post.title }}
-          <!-- <small class="post-date">{{ post.date | date_to_string }}</small> -->
+          <small class="post-date">{{ post.date | date_to_string }}</small>
           </li>
           </a>
           {% endfor %}
@@ -31,5 +51,29 @@ title: Home
         {% endfor %}
       </div>
     </div>
+
+  <!-- 카테고리 글 숨김, 표시 전환 코드 -->
+  <script type="text/javascript">
+
+    $(".category-title").click(function(){
+
+      if ($(this).next().css('display') === 'block'){
+        $(this).next().slideUp()
+        $(this).children().css("color", "#393939")
+      }else{
+        $(this).next().slideDown('slow')
+        // $(this).next().css('display', 'block')
+        $(this).children().css("color", "#ec4c6a")
+      }
+    })
+
+
+
+    $("#til-today-i-learned").parents('.category-title').next().css('display', 'none')
+    $("#til-today-i-learned").parents('.category-title').css('color', '#393939' )
+
+
+
+  </script>
   </body>
 </html>

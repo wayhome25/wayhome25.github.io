@@ -42,7 +42,7 @@ nav:
     - '/'
     # - { Categories All: '/blog/categories/' }
     - { TIL (Today I Learned): '/blog/categories/#til' }
-    - { 컴퓨터 공학 : '/blog/categories/#컴퓨터공학' }
+    - { 컴퓨터공학 : '/blog/categories/#컴퓨터공학' }
     - { Django: '/blog/categories/#django' }
     - { python: '/blog/categories/#python' }
     - { javascript: '/blog/categories/#javascript' }
