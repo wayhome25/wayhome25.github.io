@@ -18,13 +18,6 @@ title: Home
       .tags-expo-posts{
         display: block;
       }
-      #알고리즘-문제풀이 + .tags-expo-posts{
-        display: none;
-      }
-      #til-today-i-learned + .tags-expo-posts{
-        display: none;
-      }
-
       </style>
 
   </head>
@@ -63,16 +56,9 @@ title: Home
         $(this).children().css("color", "#393939")
       }else{
         $(this).next().slideDown('slow')
-        // $(this).next().css('display', 'block')
         $(this).children().css("color", "#ec4c6a")
       }
     })
-
-
-
-    $("#til-today-i-learned").parents('.category-title').next().css('display', 'none')
-    $("#til-today-i-learned").parents('.category-title').css('color', '#393939' )
-
 
 
   </script>
