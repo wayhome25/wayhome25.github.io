@@ -30,6 +30,7 @@ N is an integer within the range [1..2,147,483,647].
 Complexity:
 
 **expected worst-case time complexity is O(log(N));
+
 expected worst-case space complexity is O(1).**
 
 ## 풀이과정
@@ -42,23 +43,23 @@ expected worst-case space complexity is O(1).**
 
 ```python
 def solution(N):
-    N = bin(N)[2:] # (1) Big-O : constant 1 ## 함수의 인자로 받은 N을 2진수로 바꾼다, format(N, 'b') 도 가능
-    arr = [] # (2) Big-O: constant 1
+    N = bin(N)[2:] # 함수의 인자로 받은 N을 2진수로 바꾼다, format(N, 'b') 도 가능
+    arr = []
 
-    for idx, value in enumerate(N): # (3) Big-O: N
+    for idx, value in enumerate(N):
         if value == '1':
             arr.append(idx) # 2진수 N의 각 자릿수 중에 1에 해당하는 자릿수의 인덱스 값을 찾아 빈 배열에 담는다.
 
-    arr2 = [] # (4) Big-O: constant 1    
+    arr2 = []    
 
-    for i in range(len(arr)-1): # (5) Big-O : N
+    for i in range(len(arr)-1):
         arr2.append(arr[i+1] - arr[i] - 1) # 배열에 담긴 요소를 인접한 요소와 뺀 결과를 새로운 빈 배열에 담는다.
 
     return max(arr2) # 그 중에서 최댓값을 리턴한다.
 ```
 
 ### Big-O
-- (1) ~ (5)를 더하면 `2N + 3` Big-O 로 표현하면 O(N)
+- (1) ~ (9)를 더하면 `5N + 4` Big-O 로 표현하면 O(N)
 
 ```python
 def solution(N):
@@ -66,15 +67,15 @@ def solution(N):
     arr = [] # (2) Big-O: constant 1
 
     for idx, value in enumerate(N): # (3) Big-O: N
-        if value == '1':
-            arr.append(idx)
+        if value == '1': # (4) Big-O: N
+            arr.append(idx) # (5) Big-O: N
 
-    arr2 = [] # (4) Big-O: constant 1    
+    arr2 = [] # (6) Big-O: constant 1    
 
-    for i in range(len(arr)-1): # (5) Big-O : N
-        arr2.append(arr[i+1] - arr[i] - 1)
+    for i in range(len(arr)-1): # (7) Big-O : N
+        arr2.append(arr[i+1] - arr[i] - 1) # (8) Big-O: N
 
-    return max(arr2)
+    return max(arr2) # (9) Big-O: constant 1
 ```
 
 ## 다른 사람 코드
@@ -87,9 +88,10 @@ def solution(N):
 
 #2
 def solution(N):
-  return len(max(format(N, 'b').strip('0').split('1')))  
+  return len(max(format(N, 'b').strip('0').split('1'))) # Big-O : N  
 ```
 
+---
 
 ### .strip() / .split()
 - str.strip() 메소드를 활용하여 문자열 양 끝에서 원하는 연속된 문자열을 삭제할 수 있다.
