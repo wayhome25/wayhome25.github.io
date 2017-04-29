@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 파이썬 소켓 모듈을 사용한 간단한 채팅프로그램 구현
-category: 컴퓨터공학
+category: python
 permalink: /cs/:year/:month/:day/:title/
 comments: true
 ---

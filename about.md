@@ -5,7 +5,7 @@ title: About
 
 <p class="message">
   공부한 내용을 정리하는 블로그입니다.<br>
-  현재 패스트캠퍼스 <a href="http://cdn.www.fastcampus.co.kr/wp-content/uploads/2017/02/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99-%EC%9E%85%EB%AC%B8-SCHOOL-2%EA%B8%B0_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%95%88%EB%82%B4%EB%AC%B8.pdf?_ga=1.240441345.321893628.1483015444" target="_blank">컴퓨터공학 입문스쿨</a> 과정에 참여하고 있습니다. (~17/04)<br>
+  5월부터 패스트캠퍼스 [웹프로그래밍 스쿨](http://www.fastcampus.co.kr/dev_school_wps/)에 참여합니다. (~2017/09) <br>
   소통은 환영합니다! 편하게 댓글, 메일 주세요 : ) <br>
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
