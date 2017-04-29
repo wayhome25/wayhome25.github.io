@@ -5,7 +5,7 @@ title: About
 
 <p class="message">
   공부한 내용을 정리하는 블로그입니다.<br>
-  5월부터 패스트캠퍼스 [웹프로그래밍 스쿨](http://www.fastcampus.co.kr/dev_school_wps/)에 참여합니다. (~2017/09) <br>
+  5월부터 패스트캠퍼스 <a href="http://www.fastcampus.co.kr/dev_school_wps/">웹프로그래밍 스쿨 (python, django)</a> 에 참여합니다. (~2017/09) <br>
   소통은 환영합니다! 편하게 댓글, 메일 주세요 : ) <br>
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
