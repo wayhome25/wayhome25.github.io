@@ -1,67 +1,107 @@
 ---
 layout: post
-title: codility - CyclicRotation
+title: codility 4-4. MaxCounters
 category: 알고리즘 문제풀이
 permalink: /algorithm/:year/:month/:day/:title/
 tags: [알고리즘, 프로그래밍]
 comments: true
 ---
 
-> [문제출처](https://codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
+> [문제출처](https://codility.com/programmers/lessons/4-counting_elements/max_counters/)
 
 ## 문제
 
 ```
-A zero-indexed array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is also moved to the first place.
+You are given N counters, initially set to 0, and you have two possible operations on them:
 
-For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7]. The goal is to rotate array A K times; that is, each element of A will be shifted to the right by K indexes.
+increase(X) − counter X is increased by 1,
+max counter − all counters are set to the maximum value of any counter.
+A non-empty zero-indexed array A of M integers is given. This array represents consecutive operations:
+
+if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
+if A[K] = N + 1 then operation K is max counter.
+For example, given integer N = 5 and array A such that:
+
+    A[0] = 3
+    A[1] = 4
+    A[2] = 4
+    A[3] = 6
+    A[4] = 1
+    A[5] = 4
+    A[6] = 4
+the values of the counters after each consecutive operation will be:
+
+    (0, 0, 1, 0, 0)
+    (0, 0, 1, 1, 0)
+    (0, 0, 1, 2, 0)
+    (2, 2, 2, 2, 2)
+    (3, 2, 2, 2, 2)
+    (3, 2, 2, 3, 2)
+    (3, 2, 2, 4, 2)
+The goal is to calculate the value of every counter after all operations.
 
 Write a function:
 
-def solution(A, K)
+def solution(N, A)
+that, given an integer N and a non-empty zero-indexed array A consisting of M integers, returns a sequence of integers representing the values of the counters.
 
-that, given a zero-indexed array A consisting of N integers and an integer K, returns the array A rotated K times.
+The sequence should be returned as:
 
-For example, given array A = [3, 8, 9, 7, 6] and K = 3, the function should return [9, 7, 6, 3, 8].
+a structure Results (in C), or
+a vector of integers (in C++), or
+a record Results (in Pascal), or
+an array of integers (in any other programming language).
+For example, given:
+
+    A[0] = 3
+    A[1] = 4
+    A[2] = 4
+    A[3] = 6
+    A[4] = 1
+    A[5] = 4
+    A[6] = 4
+the function should return [3, 2, 2, 4, 2], as explained above.
 
 Assume that:
 
-N and K are integers within the range [0..100];
-each element of array A is an integer within the range [−1,000..1,000].
-In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
+N and M are integers within the range [1..100,000];
+each element of array A is an integer within the range [1..N + 1].
+Complexity:
+
+expected worst-case time complexity is O(N+M);
+expected worst-case space complexity is O(N),
+beyond input storage (not counting the storage required for input arguments).
+Elements of input arrays can be modified.
 ```
 
-
-## 풀이과정
-- 인자로 받은 리스트 A와 동일한 길이를 가진 배열 result를 정의
-- 리스트 A 를 순회하면서 기존의 index 에 K를 더하여 new_idx 변수에 담는다.
-  - 만약 new_idx 가 리스트 A의 길이보다 크거나 같다면,
-  - 리스트 A의 길이 (len(A))로 나눈 나머지를 new_idx 에 다시 담는다
--  new_idx를 사용하여 배열 result를 재정의 한다.
 
 ## 풀이코드
 
 ```python
-def solution(A, K):
-    result = [0] * len(A)
-    for idx, val in enumerate(A):
-        new_idx = idx + K
-
-        if new_idx >= len(A):
-            new_idx = new_idx % len(A)
-
-        result[new_idx] = val
+def solution(N, A):
+    result = [0] * N
+    for i in A:
+        if 1 <= i <= N:
+            result[i-1] += 1
+        else:
+            result = [max(result)] * N # O(N)
     return result
 ```
 
 ##  다른사람 코드
-- 리스트 슬라이싱 기능을 사용하면 더 간단하게 해결 가능하다.
-
 
 ```python
-def solution(A, K):
-    if len(A) == 0:
-        return A
+def solution(N, A):
 
-    return A[len(A)-(K%len(A)):] + A[:len(A)-(K%len(A))]
+    counters = N * [0]
+    next_max_counter =  max_counter = 0
+
+    for oper in A:
+        if oper <= N:
+            current_counter = counters[oper-1] = max(counters[oper-1] +1, max_counter+1)
+            next_max_counter = max(current_counter, next_max_counter)
+        else:
+            max_counter = next_max_counter
+
+    return [c if c > max_counter else max_counter for c in counters]
 ```
