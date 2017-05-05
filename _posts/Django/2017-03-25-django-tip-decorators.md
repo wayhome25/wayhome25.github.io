@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django 꿀팁 - 로그인 사용자에게만 특정 view 표시하기 (보안)
+title: 로그인 사용자에게만 특정 view 표시하기 (보안)
 category: Django
 tags: [python, Django]
 comments: true
