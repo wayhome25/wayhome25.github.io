@@ -1,6 +1,6 @@
 ---
 layout: post
-title: URL Reverse, get_absolute_url()
+title: URL Reverse, 아는 사람은 꼭 쓴다는 get_absolute_url()
 category: Django
 tags: [python, Django, url]
 comments: true
@@ -84,8 +84,10 @@ class Post(models.Model):
 ```
 
 ##  get absolute url 활용
+- 2, 3, 1 의 순서대로 많이 사용
+- 처음부터 get_absolute_url 을 적극적으로 사용하는 연습을 하는 것이 좋음
 
-### url template tag로 활용
+### 1. url template tag로 활용
 
 ```html
 {% raw %}
@@ -93,7 +95,7 @@ class Post(models.Model):
 {% endraw %}
 ```
 
-### resolve_url, redirect를 통한 활용
+### 2. resolve_url, redirect를 통한 활용
 
 ```python
 from django.shortcuts import resolve_url
@@ -107,6 +109,6 @@ print(redirect(post))
 # <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/blog/105/">
 ```
 
-### CBV 에서의 활용
+### 3. CBV 에서의 활용
 - CreateView, UpdateView에 success_url을 제공하지 않는 경우, 해당 model instance의 get_absolute_url 주소로 이동이 가능한지 체크
 - 생성, 수정 뒤에 Detail 화면으로 가는 것은 일반적
