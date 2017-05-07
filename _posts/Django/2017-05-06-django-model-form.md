@@ -134,8 +134,8 @@ def post_new(request):
 ```python
 # myapp/forms.py
 class CommentForm(forms.Form):
-	def clean_message(self):
-		return self.cleaned_data.get('message', '').strip()
+	def clean_message(self): # Form 클래스 내 clean 멤버함수를 통해 값 변경이 가능
+		return self.cleaned_data.get('message', '').strip() # 좌우 공백 제거
 
 
 # myapp/views.py
