@@ -41,6 +41,7 @@ git checkout e83c5163316f89bfbde7d9ab23ca2e25604af290
 - 원격 저장소의 별명을 설정할 수 있다. (저장소 주소가 길기 때문에)
 - 여러개의 원격 저장소를 로컬저장소로 저장할 수 있다.
 
+### remote 저장소 설정
 ```shell
 # 원격 저장소의 이름(별명)을 각각 origin , memo 지정한다.
 ❯ git remote add origin https://github.com/wayhome25/gitfth.git
@@ -54,6 +55,14 @@ origin
 # 처음에 한번만 -u 설정을 하면 앞으로 git push 만 입력해도 origin의 master 브랜치로 push한다.
 ❯ git push -u origin master
 ```
+### remote 저장소 변경
+```shell
+# 현재 원격 저장소 상태 확인
+❯ git remote -v
+# 변경하고자 하는 원격저장소 설정
+❯ git remote set-url origin https://github.com/wayhome25/fastcampus_school
+```
+
 
 - 이미 존재하는 원격 저장소를 새로운 로컬 저장소에 연결할 수 있다.
 - 별도의 remote 설정없이 clone을 통해서 원격 저장소와 연결된다.

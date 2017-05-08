@@ -7,7 +7,7 @@ tags: [알고리즘, 프로그래밍]
 comments: true
 ---
 
-> [문제출처](https://codility.com/programmers/lessons/3-time_complexity/)
+> [문제출처](https://codility.com/programmers/lessons/4-counting_elements/)
 
 ## 문제
 
@@ -59,6 +59,7 @@ expected worst-case space complexity is O(N), beyond input storage
 ## 풀이코드
 ### 풀이코드 1
 - Detected time complexity: O(N) or O(N * log(N))
+
 ```python
 def solution(A):
     M = max(A)
