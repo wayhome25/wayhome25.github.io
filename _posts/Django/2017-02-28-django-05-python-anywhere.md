@@ -99,6 +99,10 @@ SECRET_KEY= '....'
 
 # 배포 후, 수정사항 pythonanywhere에 반영하기
 
+## git push
+- python manage.py collectstatic 수행
+- 수정사항을 git push
+
 ## git pull
 - 사이트내 [Your consoles](https://www.pythonanywhere.com/user/siwabada/consoles/) bash 실행
 - virtualenv 가 실행되어 있는지 확인

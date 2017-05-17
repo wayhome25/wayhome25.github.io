@@ -54,25 +54,20 @@ django로 연습 프로젝트를 만들다 보면 항상 처음에 아래 2가�
 $ brew update
 $ brew install pyenv
 
-# ~/.bashrc - bash를 사용하는 경우
-$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc #bash 를 통해서 파일에 입력
-$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-$ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-$ source ~/.bashrc #재실행
-$ exec "$SHELL" # shell 재실행
-
 #~/.zshrc - zsh을 사용하는 경우
 $ atom ~/.zshrc # atom을 통해서 파일에 아래 내용 입력
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 $ source ~/.zshrc #재실행
 $ exec "$SHELL" # shell 재실행
 ```
 
 ## pyenv를 활용한 python 설치
+- 파이썬 설치 전 필요 패키지 설치
+	- https://github.com/yyuu/pyenv/wiki/Common-build-problems
 
 ```shell
 $ pyenv version
@@ -80,6 +75,19 @@ $ pyenv install --list # 설치 가능한 패키지 목록 (파이썬 버전별 
 $ pyenv install 3.6.0 # python 설치
 $ pyenv shell 3.6.0 # pyhotn 3.6.0으로 shell 실행 > autoenv를 사용하면 별도 지정이 필요 없음
 $ python --version
+```
+
+- pyenv global 설정을 통해서 기본으로 실행될 python 버전을 설정 가능하다.
+(시스템 python에는 영향 없음)
+
+```shell
+$ pyenv global 3.5.3
+$ python --version
+# Python 3.5.3
+
+$ pyenv global system
+$ python --version
+#Python 2.7.10
 ```
 
 ---
@@ -132,13 +140,22 @@ $ python manage.py shell_plus --notebook # jupyter notebook을 통해서 djnago 
 - requirements.txt가 있다면 다음 명령을 통해 동일한 파이썬 패키지들을 한번에 설치할 수 있다.
 
 ```shell
-$ pip3 list > requirements.txt  # 패키지 목록을 txt 파일로 만들기
+$ pip3 freeze > requirements.txt  # 패키지 목록을 txt 파일로 만들기
 $ pip3 install -r requirements.txt  # 한번에 패키지 설치
 ```
 
 ---
 
 # 3. autoenv
+## (추가) local에 가상환경 설정
+- pyenv local 명령을 통해서 원하는 디렉토리에 가상환경을 지정할 수 있다. (자동 on/off)
+- 사용할 폴더로 이동 후 아래 명령을 시행하면 .python-version 파일이 생성된다.
+
+```python
+pyenv local fc-python(가상환경이름)
+```
+
+## autoenv
 - autoenv를 설치하고 프로젝트 폴더에 .env 파일을 만들어 자동으로 가상환경이 실행되도록 만든다.
 - autoenv : Directory-based environments, 폴더 안에 .env 파일이 있으면 해당 폴더에 들어갈 때 자동으로 가상환경이 실행된다.
 

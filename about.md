@@ -17,10 +17,14 @@ title: About
 
 - Django
   - [AskDjango - 장고 기본편 (이진석)](https://nomade.kr/vod/django/)
+  - [Django로 배우는 쉽고 빠른 웹 개발 파이썬 웹 프로그래밍 실전편](http://www.yes24.com/24/goods/29331035?scode=029)
+  - [Django로 배우는 쉽고 빠른 웹 개발 파이썬 웹 프로그래밍 기본편](http://www.hanbit.co.kr/store/books/look.php?p_code=B5790464800)
   - [파이썬 웹 프로그래밍 – Django로 웹 서비스 개발하기 (정호영)](https://www.inflearn.com/members/hyunjoo_lee_1/course/)
 
 - python
+	- [처음 시작하는 파이썬](http://www.hanbit.co.kr/store/books/look.php?p_code=B2827459900)
   - [파이썬 입문 (tryhelloworld)](http://tryhelloworld.co.kr/courses/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%AC%B8)
+
 
 - git
     - [지옥에서 온 git (생활코딩)](https://opentutorials.org/module/2676)
@@ -45,8 +49,9 @@ title: About
     - 인증기능 (로그인, 로그아웃)
     - CRUD (글 추가, 조회, 갱신, 삭제)
     - 댓글기능 (Many-to-one relationships)
-    - YouTube 동영상 링크를 받아서 iframe으로 추가 (정규표현식)
-    - python, django, bootstrap, pythonanywhere 활용
+    - summernote package를 활용한 WYSWYG editor 적용
+	- CBV Listview 활용
+    - bootstrap을 사용하여 마크업
 
 - [첫번째 Django 프로젝트 메모 게시판](http://siwabada.pythonanywhere.com/)
     - 인증기능 (회원가입, 로그인, 로그아웃)
@@ -61,6 +66,6 @@ title: About
 - 프론트엔드 연습목록
 	- [bootstrap 그리드 시스템, scss를 활용한 프로젝트용 웹 사이트 마크업](https://wayhome25.github.io/fastcampus_school/homework/10km/)
 	- [scss를 활용한 텀블벅 웹 페이지 마크업](https://wayhome25.github.io/fastcampus_school/01_html-css/tumblbug/projects.html)
-	- [그리드 시스템을 활용한 쇼핑몰 메인화면 레이아웃](https://wayhome25.github.io/front-end/practice_team_activity)    
- 	- [반응형 웹 페이지 ](https://wayhome25.github.io/small_project/responsive_website/)
+	- [그리드 시스템을 활용한 쇼핑몰 메인화면 레이아웃](https://wayhome25.github.io/front-end/practice_team_activity)
+	- [반응형 웹 페이지 ](https://wayhome25.github.io/small_project/responsive_website/)
 	- [그 밖의 프론트엔드 연습목록](https://github.com/wayhome25/front-end/blob/master/Readme.md)
