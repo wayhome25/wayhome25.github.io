@@ -38,6 +38,7 @@ comments: true
 - [강의] [KHAN 아카데미 알고리즘](https://ko.khanacademy.org/computing/computer-science/algorithms)
 
 ## 기타
+- [책] [나도 몰라 디자인 패턴 핸드북](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788998374440)
 - [강의] [Git - CLI기반](https://opentutorials.org/course/2708/15242)
 - [강의] [Git - GUI기반](https://opentutorials.org/course/1492)
 - [책] [기초 튼튼 코드 튼튼 다 함께 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791185890494&orderClick=QSA#review)
