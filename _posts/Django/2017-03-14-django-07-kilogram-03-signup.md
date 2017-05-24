@@ -22,7 +22,7 @@ comments: true
 ```python
 urlpatterns = [
   url(r'^accounts/signup$', kilogram_views.CreateUserView.as_view(), name = 'signup'),
-  url(r'^accounts/login/done$', kilogram_views.ResisteredView.as_view(), name = 'create_user_done'),
+  url(r'^accounts/login/done$', kilogram_views.RegisteredView.as_view(), name = 'create_user_done'),
 ]
 ```
 
