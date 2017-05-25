@@ -148,11 +148,12 @@ $ pip3 install -r requirements.txt  # 한번에 패키지 설치
 
 # 3. autoenv
 ## (추가) local에 가상환경 설정
-- pyenv local 명령을 통해서 원하는 디렉토리에 가상환경을 지정할 수 있다. (자동 on/off)
+- pyenv local 명령을 통해서 원하는 디렉토리에 가상환경을 지정할 수 있다. (자동 on/off) 따라서 별도로 아래의 **autoenv를 설치할 필요가 없다!**
 - 사용할 폴더로 이동 후 아래 명령을 시행하면 .python-version 파일이 생성된다.
 
 ```python
 pyenv local fc-python(가상환경이름)
+pyenv global <가상환경이름> # 기본으로 사용할 환경 설정
 ```
 
 ## autoenv
