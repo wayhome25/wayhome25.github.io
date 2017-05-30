@@ -1,6 +1,6 @@
 ---
 layout: post
-title: codility 4-1. Perm Check
+title: codility 4-2. Perm Check
 category: 알고리즘 문제풀이
 permalink: /algorithm/:year/:month/:day/:title/
 tags: [알고리즘, 프로그래밍]
