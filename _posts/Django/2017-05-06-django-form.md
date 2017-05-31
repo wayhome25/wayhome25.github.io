@@ -129,7 +129,7 @@ class PostForm(forms.Form):
 
 - model class 정의시에 validators 옵션 적용 가능
 - 아래와 같이 `model에 validators 를 정의하는 것을 권장` (Model Form에 그대로 적용 가능)
-- admin 사이트에서도 validator 동작 (admin도 Model Form을 생성하여 사용하기 떄문)
+- admin 사이트에서도 validator 동작 (admin도 Model Form을 생성하여 사용하기 때문)
 
 ```python
 from django import forms

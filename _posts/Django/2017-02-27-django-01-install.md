@@ -111,4 +111,4 @@ $ python manage.py runserver
   - autocomplete-python
   - script
 - atom에서 cmd + i 단축키를 통해 파이썬을 실행할 수 있음
-- [한글 입력시 발생하는 문제 해결 방법](https://blog.chann.kr/how-to-use-python3-in-atom/) 
+- [한글 입력시 발생하는 문제 해결 방법](https://blog.chann.kr/how-to-use-python3-in-atom/)
