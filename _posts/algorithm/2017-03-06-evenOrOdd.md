@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 짝수와 홀수 - 삼항연산자
+title: level 1. 짝수와 홀수 - 삼항연산자 (Java, Python)
 category: 알고리즘 문제풀이
 permalink: /algorithm/:year/:month/:day/:title/
 
@@ -26,7 +26,8 @@ print("결과 : " + evenOrOdd(3))
 print("결과 : " + evenOrOdd(2))
 ```
 
-## 다른사람 풀이
+
+## 다른사람 풀이 (Python)
 
 ```python
 def evenOrOdd(num):
@@ -41,3 +42,46 @@ def evenOrOdd(num):
 ## 배운점
 - 파이썬에도 삼항연산자가 있다는걸 배웠다.
 - `a if test else b` : test가 true일 경우 a를, 그렇지 않으면 b를 리턴한다.
+
+---
+
+## 풀이 (Java)
+
+```java
+public class EvenOrOdd {
+    String evenOrOdd(int num) {
+        String result;
+      	if(num % 2 == 1){
+          result = "Odd";
+        }else{
+          result = "Even";
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String str = "1 2 3 4";
+        EvenOrOdd evenOrOdd = new EvenOrOdd();
+        //아래는 테스트로 출력해 보기 위한 코드입니다.
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(3));
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(2));
+    }
+}
+```
+
+## 다른사람 풀이 (Java)
+
+```java
+public class EvenOrOdd {
+    String evenOrOdd(int num) {
+        return (num % 2 == 0) ? "Even" : "Odd";
+    }
+
+    public static void main(String[] args) {
+        EvenOrOdd evenOrOdd = new EvenOrOdd();
+        //아래는 테스트로 출력해 보기 위한 코드입니다.
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(3));
+        System.out.println("결과 : " + evenOrOdd.evenOrOdd(2));
+    }
+}
+```
