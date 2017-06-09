@@ -5,13 +5,12 @@ title: About
 
 <p class="message">
   공부한 내용을 정리하는 블로그입니다.<br>
-  패스트캠퍼스 <a href="http://www.fastcampus.co.kr/dev_school_wps/">웹프로그래밍 스쿨 (python, django)</a> 에 참여중입니다. (~2017/09) <br>
   소통은 환영합니다! 편하게 댓글, 메일 주세요 : ) <br>
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필 (구직중)</a><br>
 </p>
 
 ## 공부한 것
-- 컴퓨터공학 입문
+- 컴퓨터공학 (자료구조, 알고리즘)
     - 패스트캠퍼스 컴퓨터 공학 입문 (2017/03-04) [강의 커리큘럼](http://cdn.www.fastcampus.co.kr/wp-content/uploads/2017/02/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99-%EC%9E%85%EB%AC%B8-SCHOOL-2%EA%B8%B0_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%95%88%EB%82%B4%EB%AC%B8.pdf?_ga=1.240441345.321893628.1483015444)
     - oop, memory, data structure, algorithm, network, DB
 
@@ -25,6 +24,9 @@ title: About
 	- [처음 시작하는 파이썬](http://www.hanbit.co.kr/store/books/look.php?p_code=B2827459900)
   - [파이썬 입문 (tryhelloworld)](http://tryhelloworld.co.kr/courses/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%AC%B8)
 
+- Java
+  - [Java (생활코딩)](https://opentutorials.org/course/1223/4551)
+  - [점프 투 자바](https://wikidocs.net/265)
 
 - git
     - [지옥에서 온 git (생활코딩)](https://opentutorials.org/module/2676)
