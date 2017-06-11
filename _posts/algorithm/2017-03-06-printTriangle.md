@@ -1,9 +1,8 @@
 ---
 layout: post
-title: level 1. 삼각형출력하기
+title: level 1. 삼각형출력하기 (java, python)
 category: 알고리즘 문제풀이
 permalink: /algorithm/:year/:month/:day/:title/
-
 tags: [알고리즘, 프로그래밍]
 comments: true
 ---
@@ -38,3 +37,51 @@ def printTriangle(num):
 
 ## 배운점
 - ''.join(List) 를 통해서 리스트의 각 요소를 그대로 붙여서 스트링으로 만들 수 있다.
+
+---
+
+## 풀이 (java)
+
+```java
+public class PrintTriangle {
+  public String printTriangle(int num){
+    String result = "";
+    for(int i=1; i<=num; i++){
+      String star = new String(new char[i]).replace("\0", "*");
+      result += star + "\n";
+    }
+    return result;
+  }
+
+  // 아래는 테스트로 출력해 보기 위한 코드입니다.
+  public static void main(String[] args) {
+    PrintTriangle pt = new PrintTriangle();
+    System.out.println(pt.printTriangle(3) );
+  }
+}
+```
+
+## 다른사람 풀이
+
+```java
+public class PrintTriangle {
+    public String printTriangle(int num){
+      String result = "";
+      String stars = "*";
+      for(int i=0; i<num; ++i){
+          result += stars+"\n";
+          stars += "*";
+      }
+      return result;
+    }
+
+    // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    public static void main(String[] args) {
+        PrintTriangle pt = new PrintTriangle();
+        System.out.println( pt.printTriangle(3) );
+    }
+}
+```
+
+## 배운점
+- String 클래스의 replace 메소드
