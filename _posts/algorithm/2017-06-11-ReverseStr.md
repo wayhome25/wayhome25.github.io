@@ -21,18 +21,18 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class ReverseStr {
-	public String reverseStr(String str){
-		String[] array = str.split("");
+  public String reverseStr(String str){
+    String[] array = str.split("");
     Arrays.sort(array);
     Collections.reverse(Arrays.asList(array));
-		return  String.join("",array);
-	}
+    return  String.join("",array);
+  }
 
-	// 아래는 테스트로 출력해 보기 위한 코드입니다.
-	public static void main(String[] args) {
-		ReverseStr rs = new ReverseStr();
-		System.out.println( rs.reverseStr("Zbcdefg") );
-	}
+// 아래는 테스트로 출력해 보기 위한 코드입니다.
+  public static void main(String[] args) {
+    ReverseStr rs = new ReverseStr();
+    System.out.println( rs.reverseStr("Zbcdefg") );
+  }
 }
 ```
 
@@ -43,9 +43,9 @@ import java.util.Arrays;
 
 public class ReverseStr {
     public String reverseStr(String str){
-    char[] sol = str.toCharArray();
-    Arrays.sort(sol);
-    return new StringBuilder(new String(sol)).reverse().toString();
+      char[] sol = str.toCharArray();
+      Arrays.sort(sol);
+      return new StringBuilder(new String(sol)).reverse().toString();
     }
 
     // 아래는 테스트로 출력해 보기 위한 코드입니다.
