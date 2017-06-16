@@ -42,3 +42,6 @@ comments: true
 - [강의] [Git - CLI기반](https://opentutorials.org/course/2708/15242)
 - [강의] [Git - GUI기반](https://opentutorials.org/course/1492)
 - [책] [기초 튼튼 코드 튼튼 다 함께 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791185890494&orderClick=QSA#review)
+
+- [책] [프로그래머의 길, 멘토에게 묻다](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788991268807&orderClick=JAj)
+- [책] [실용주의 사고와 학습](http://wikibook.co.kr/pragmatic-thinking-and-learning/)
