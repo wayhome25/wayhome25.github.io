@@ -1,11 +1,10 @@
 ---
 layout: post
-title: django 쿼리셋 수정을 통한 웹서비스 성능 개선 - selected_related, prefetch_related  
+title: django 쿼리셋 수정을 통한 웹서비스 성능 개선 - select_related, prefetch_related  
 category: Django
 tags: [python, Django, 인증]
 comments: true
 ---
-> [AskDjango](https://nomade.kr/vod/django) 수업을 듣고 중요한 내용을 정리하였습니다.
 
 # 쿼리셋 수정을 통한 웹서비스 성능 개선
 
@@ -26,7 +25,7 @@ comments: true
   - ManyToManyField, ForeignKey의 reverse relation 에서 활용
   - 각 관계 별로 DB 쿼리를 수행하고, 파이썬 단에서 조인을 수행한다.
 
-**수정 결과는 대만족! `28개의 쿼리문이 5개로 줄어들고 중복은 모두 삭제되었다.`**
+**수정 결과는 대만족! `28개의 쿼리문이 5개로 줄어들고 중복은 모두 삭제되었다.`**      
 아래는 내가 겪었던 문제와, 이를 해결하는 과정을 정리한 내용이다.
 
 ---
