@@ -2,7 +2,7 @@
 layout: post
 title: django 쿼리셋 수정을 통한 웹서비스 성능 개선 - select_related, prefetch_related  
 category: Django
-tags: [python, Django, 인증]
+tags: [python, Django, queryset]
 comments: true
 ---
 
