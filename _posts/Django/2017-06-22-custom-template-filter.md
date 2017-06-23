@@ -15,6 +15,8 @@ comments: true
 
 ![스크린샷 2017-06-22 오후 10.38.36](http://i.imgur.com/qR2o9ut.jpg)
 <center><figcaption>내가 원하는 것</figcaption></center>
+<br>
+
 
 
 여러가지 방법을 고민하고 시도해보았는데, 생각도 못했던 오류들이 다양하게 발생했다.     
@@ -70,10 +72,9 @@ def post_list(request):
 {% endfor %}
 {% endraw %}
 ```
+<br>
 
-----
-
-
+---
 # custom template filter 적용하기
 
 [Django 공식문서](https://docs.djangoproject.com/en/1.10/howto/custom-template-tags/) 를 찾아보면, 사용자 정의 템플릿 필터를 만드는 과정은 크게 3가지로 나뉜다.
@@ -83,13 +84,13 @@ def post_list(request):
 3. template 내에 해당 모듈을 load 하고, 원하는 field에 필터 적용하기
 
 
-## 장고 프로젝트 app 내에 templatetags 폴더 (패키지) 만들기
+## 1. 장고 프로젝트 app 내에 templatetags 폴더 (패키지) 만들기
 - 일반적으로 custom template tags, filters 를 정의하는 곳이 Django app 디렉토리 안이다.
 - 작성하려는 사용자 정의 필터가 진행중인 프로젝트 앱과 연관성이 있다면, 해당 앱 디렉토리 하단에 `templatetags` 폴더를 추가한다.     
   (modles.py, views.py 와 동일한 level에 추가한다.)
 - 폴더 작성 후 해당 폴더 내에 `__init__.py` 라는 이름의 빈 파일을 추가한다. (내용은 없어도 괜찮다.)
 - 이 파일의 역할은 해당 폴더가 파이썬 패키지 라는 것을 명시하는 것이다.
-- templatetags 폴더(모듈)을 추가하고 나서는 터미널로 돌아가 서버를 재시작 해야 정상적으로 적용된다.
+- templatetags 폴더(패키지)을 추가하고 나서는 터미널로 돌아가 서버를 재시작 해야 정상적으로 적용된다.
 
 ```python
 # 폴더구조 예시
@@ -102,7 +103,7 @@ post/
     views.py
 ```
 
-## 사용자 정의 템플릿 필터 (모듈) 작성하기
+## 2. 사용자 정의 템플릿 필터 (모듈) 작성하기
 - templatetags 폴더 아래에 원하는 이름으로 .py 파일을 추가한다.
 - 여기서는 post_extras.py 라는 이름을 사용하였다. 해당 파일에는 사용자 정의 필터 함수를 작성할 것이다.
 - 우선은 상단에 아래와 같은 코드를 추가한다. register는 유효한 tag library를 만들기 위한 모듈 레벨의 인스턴스 객체이다.
@@ -115,7 +116,7 @@ register = template.Library()
 ```
 
 - 그리고 `add_link` 라는 이름의 함수를 정의한다. (이것이 바로 template에서 사용할 사용자 정의 필터의 이름이다.)
-- 해당 필터 함수는 `post|add_link` 와 같이 활용될 수 있다. 이때 post 객체는 value 파라미터로 전달된다.
+- 해당 필터 함수는 `post|add_link` 와 같이 활용될 수 있다. 이때 post 객체는 add_link 함수의 파라미터로 전달된다.
 
 ```python
 # post_extras.py
@@ -130,26 +131,26 @@ def add_link(value):
     return content # 원하는 문자열로 치환이 완료된 content를 리턴한다.
 ```
 
-## template 내에 해당 모듈을 load 하고, 원하는 field에 필터 적용하기
+## 3. template 내에 해당 모듈을 load 하고, 원하는 field에 필터 적용하기
 - 우선 템플릿 상단에 사용할 모듈을 load한다.
 - 여기서는 사용자 정의 필터가 포함된 모듈인 post_extras.py 를 load 한다.
 
 ```html
 {% raw %}
 <!-- post_list.html -->
-{% load post_extras %} {# custom filter 추가 #}
+{% load post_extras %}  <!-- custom filter 추가 -->
 {% endraw %}
 ```
 
 - `post|add_link` 와 같이, 원하는 부분에 사용자 정의 필드인 add_link 를 적용할 수 있다.
-- 여기서는 post 인스턴스 객체를 add_link 함수의 arguments로 받아서 정의된 작업을 진행한 이후에 content를 리턴한다.
+- 여기서는 post 인스턴스 객체를 add_link 함수의 파라미터로 받아서 정의된 작업을 진행한 이후에 content를 리턴한다.
 
 ```html
 <!-- post_list.html -->
 {% raw %}
-<!-- ...생략... -->
 {% for post in post_list %}
 <ul>
+  <!-- ...생략... -->
   <li>{{ post.author.profile.nickname }}</li>
   <li><img src="{{ post.photo.url }}" alt="{{ post.author }}'s photo"></li>
   <li>{{ post|add_link|safe }}</li>
@@ -161,11 +162,14 @@ def add_link(value):
 ```
 
 ## 결과물
+- 사용자 정의 템플릿 필터를 사용하면 템플릿 랜더링 시에 원하는 대로 DB를 조작할 수 있다. (줄바꿈 추가하기, 필터링, html escape 처리 등)
+- 좋은 점은 DB의 원본 데이터에는 영향을 미치지 않는다는 점이다.
+- css 작업 전이라 아직 수수하지만 결과물은 아래와 같다. 해시태그 링크를 클릭하면 해당 해시태그를 가진 모든 post list가 화면에 출력 되도록 구현하였다. (이 부분에 대한 코드는 [github](https://github.com/wayhome25/Instagram) 에서 확인 가능하다.)
 
+<br>
 ![스크린샷 2017-06-23 오전 12.47.21](http://i.imgur.com/3ojyWZi.jpg)
 <center><figcaption>아직 아름답지는 않지만.. 원하는건 구현했다! </figcaption></center>
-
-
+<br>
 ## 결론, 느낀점  
 - 처음에는 다른 방법으로 고민을 많이해서 문제 해결에 시간이 많이 걸렸다.
 - Post 모델에 메소드를 구현하고, 직접 content 필드 내의 문자열을 수정했더니 DB 자체에 a 태그가 포함되는 문제가 발생했다.
