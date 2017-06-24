@@ -6,6 +6,22 @@ tags: [python, Django, 사용자정의필터]
 comments: true
 ---
 
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+* [장고 Custom Template Filter 활용하기](#장고-custom-template-filter-활용하기)
+  * [들어가기](#들어가기)
+  * [Model](#model)
+  * [view](#view)
+  * [template](#template)
+* [custom template filter 적용하기](#custom-template-filter-적용하기)
+  * [1. 장고 프로젝트 app 내에 templatetags 폴더 (패키지) 만들기](#1-장고-프로젝트-app-내에-templatetags-폴더-패키지-만들기)
+  * [2. 사용자 정의 템플릿 필터 (모듈) 작성하기](#2-사용자-정의-템플릿-필터-모듈-작성하기)
+  * [3. template 내에 해당 모듈을 load 하고, 원하는 field에 필터 적용하기](#3-template-내에-해당-모듈을-load-하고-원하는-field에-필터-적용하기)
+  * [결과물](#결과물)
+  * [결론, 느낀점](#결론-느낀점)
+
+<!-- tocstop -->
+
 # 장고 Custom Template Filter 활용하기
 
 ## 들어가기
