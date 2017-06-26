@@ -234,3 +234,7 @@ def post_list(request):
 사실 [AskDjango](https://nomade.kr/vod/django/39/)에서 관련된 강의를 들었을 때는 '아 이런게 있구나' 하고 넘어갔던 내용이다.
 역시 필요성이 생기니 정보에 대해 접근하는 태도가 달라지는 것 같다.     
 그리고 덤으로 [django-debug-toolbar](http://django-debug-toolbar.readthedocs.io/en/stable/) 활용 방법을 찾은 것 같다. 이렇게 유용할 줄이야!
+
+## reference
+- [(AskDjango 강의) Relation QuerySet 성능 높이기 - selected_related, prefetch_related](https://nomade.kr/vod/django/39/)
+- [(raccoony님의 블로그) Django에서 쿼리셋 효과적으로 사용하기](http://raccoonyy.github.io/using-django-querysets-effectively-translate/index.html)

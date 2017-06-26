@@ -40,8 +40,21 @@ title: Home
         {% endfor %}
       </div>
       <hr/>
-      <a href="/blog/"><h4 id="shortcut"><img id="shortcut-img" src="/assets/images/shortcut.png">최근 글 바로가기</h4></a>
+
       <div class="tags-expo-section">
+        <a href="/blog/"><h4 id="shortcut"><img id="shortcut-img" src="/assets/images/shortcut.png">최근 글 바로가기</h4></a>
+        <ul class="tags-expo-posts">
+          {% for post in site.posts offset: 0 limit: 10  %}
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <li>
+              {{ post.title }}
+              <small class="post-date">{{ post.date | date_to_string }}</small>
+            </li>
+          </a>
+          {% endfor %}
+        </ul>
+
+
         {% for tag in site.categories %}
         <a class="category-title"><h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2></a>
         <ul class="tags-expo-posts">
