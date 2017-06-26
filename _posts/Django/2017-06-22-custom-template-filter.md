@@ -6,6 +6,9 @@ tags: [python, Django, 사용자정의필터]
 comments: true
 ---
 
+# 장고 Custom Template Filter 활용하기
+
+## 목차
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
 * [장고 Custom Template Filter 활용하기](#장고-custom-template-filter-활용하기)
@@ -21,8 +24,6 @@ comments: true
   * [결론, 느낀점](#결론-느낀점)
 
 <!-- tocstop -->
-
-# 장고 Custom Template Filter 활용하기
 
 ## 들어가기
 요즘 연습중인 [인스타그램st 프로젝트](https://github.com/wayhome25/Instagram) 를 진행하며     

@@ -5,8 +5,33 @@ category: Django
 tags: [python, Django, ajax]
 comments: true
 ---
-> 개인적인 연습 내용을 정리한 글입니다.
+> 개인적인 연습 내용을 정리한 글입니다.      
 > 더 좋은 방법이 있거나, 잘못된 부분이 있으면 편하게 의견 주세요. :)
+
+## 목차
+
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+* [들어가기](#들어가기)
+* [Ajax](#ajax)
+  * [Ajax의 장점](#ajax의-장점)
+* [기존의 방식으로 좋아요 기능구현 (새로고침 O)](#기존의-방식으로-좋아요-기능구현-새로고침-o)
+  * [좋아요 구현코드1 (새로고침 O)](#좋아요-구현코드1-새로고침-o)
+    * [Model](#model)
+    * [urls](#urls)
+    * [view](#view)
+    * [Template](#template)
+* [Ajax/jQuery를 활용하여 인스타그램 좋아요 구현 (새로고침 X)](#ajaxjquery를-활용하여-인스타그램-좋아요-구현-새로고침-x)
+  * [좋아요 구현코드2 (새로고침 X)](#좋아요-구현코드2-새로고침-x)
+    * [Model](#model-1)
+    * [urls](#urls-1)
+    * [View](#view-1)
+    * [Template](#template-1)
+* [느낀점](#느낀점)
+* [reference](#reference)
+
+<!-- tocstop -->
+
 
 ## 들어가기
 요즘 연습중인 [인스타그램st 프로젝트](https://github.com/wayhome25/Instagram) 를 진행하며 좋아요 버튼을 눌렀을 때 새로고침 없이 좋아요 숫자가 증감하도록 구현하고 싶었다.
@@ -140,6 +165,7 @@ Ajax 를 통하여 전체 페이지를 새로 고치지 않고도 서버로 부�
 </figure>
 </center>
 <br>
+
 ## 좋아요 구현코드2 (새로고침 X)
 - Ajax/jQuery를 할용하여 작성한 전체 코드는 [github](https://github.com/wayhome25/Instagram/commit/72b5649b8c4b38dda210d9a1bab00df55c1016a6)에서 확인 가능하다.
 
