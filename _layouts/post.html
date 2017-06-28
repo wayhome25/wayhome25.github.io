@@ -5,6 +5,7 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread"></a>
   {% if page.tags %} |
   {% for tag in page.tags %}
     <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
@@ -40,7 +41,6 @@ s.setAttribute('data-timestamp', +new Date());
 {% endif %}
 
 
-<!-- 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -55,4 +55,4 @@ s.setAttribute('data-timestamp', +new Date());
       </li>
     {% endfor %}
   </ul>
-</div> -->
+</div>

@@ -60,7 +60,7 @@ expected worst-case space complexity is O(1),
 beyond input storage (not counting the storage required for input arguments).
 ```
 
-## 풀이코드
+## 풀이코드 - O(n^2)
 - Detected time complexity: O(N)
 - 조합 가능한 (0,1) pair의 갯수를 찾는다
 - 조건
@@ -70,37 +70,33 @@ beyond input storage (not counting the storage required for input arguments).
 
 ```python
 def solution(A):
-    temp_li_p = []
-    temp_li_q = []
-    for idx, val in enumerate(A):
-        if val == 0:
-            temp_li_p.append(idx)
-        else:
-            temp_li_q.append(idx)
-
+    index_zero = [i for i, x in enumerate(A) if x == 0]
     result = 0
-    for idx, val in enumerate(temp_li_p):
-        result += (len(A)-val) - (len(temp_li_p)-idx)
+    for i in index_zero:
+        result += A[i+1:].count(1)
 
     if result > 1000000000:
         return -1
     return result
+
 ```
 
 ## 다른사람 풀이
-- 리스트를 역으로 순회하면서, 1의 갯수를 누적해서 더하고, 0을 만나면 누적 값을 total에 합산한다
-- range(4, -1, -1) = range(시작, 끝, 증가값) = 4, 3, 2, 1, 0
+- 리스트를 순회하면서, 0의 갯수를 누적해서 더하고, 1을 만나면 누적 값을 result에 합산한다
 
 ```python
 def solution(A):
-    total = 0
-    count_one = 0
-    for i in range(len(A)-1, -1, -1):
-        if A[i] == 1:
-            count_one += 1
-        elif A[i] == 0:
-            total += count_one
-    if total > 1000000000:
+    result = 0
+    count_zero = 0
+    for i in A:
+        if i == 1 and count_zero == 0:
+            continue
+        elif i == 0:
+            count_zero += 1
+        elif i == 1:
+            result += count_zero
+
+    if result > 1000000000:
         return -1
-    return total
+    return result
 ```
