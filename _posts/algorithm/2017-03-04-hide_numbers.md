@@ -21,15 +21,18 @@ comments: true
 ## 풀이 (python)
 
 ```python
+#풀이 1 - slice 활용
 def hide_numbers(s):
-	s_last_four = s[-4:]
-	s = len(s) * '*'
-	return s[0:-4]+s_last_four
+    return (len(s)-4)*'*'+s[-4:] # slice 시간복잡도 O(N)
 
+# 풀이 2
+def hide_numbers(s):
+    return s.replace(s[:-4], '*'*(len(s)-4))
 
 # 아래는 테스트로 출력해 보기 위한 코드입니다.
 print("결과 : " + hide_numbers('01033334444'));
 ```
+
 
 ## 다른사람 풀이
 

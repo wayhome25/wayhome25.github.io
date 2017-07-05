@@ -17,12 +17,31 @@ n이 임의의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 �
 
 ## 풀이 (python)
 ```python
+# 풀이 1
 import math
 def nextSqure(n):
     return pow(math.sqrt(n)+1, 2) if int(math.sqrt(n)) == math.sqrt(n) else 'no'
 
 # 아래는 테스트로 출력해 보기 위한 코드입니다.
 print("결과 : {}".format(nextSqure(121)));
+
+# 풀이 2
+def nextSqure(n):
+    for i in range(1,n//2):
+        if i * i == n:
+            return (i + 1) ** 2
+        if i * i > n:
+            return 'no'
+
+# 풀이 3
+def nextSqure(n):
+    t = int(pow(n, 0.5))
+    return (t+1)**2 if t**2==n else 'no'
+
+# 참고 - 제곱근을 구하는 여러가지 방법
+# n ** 5
+# pow(n, 0.5)
+# math.sqrt(n)
 ```
 
 ## 다른사람 풀이

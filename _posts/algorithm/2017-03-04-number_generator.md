@@ -25,10 +25,19 @@ number_generator함수는 x와 n을 입력 받습니다.
 ### python
 
 ```python
+# 풀이 1
 def number_generator(x, n):
-    # 함수를 완성하세요
-    return list(range(x, x*n+1, x))
+    result = [x]
+    for i in range(2, n+1):
+        result.append(x * i)
+    return result
 
-# 아래는 테스트로 출력해 보기 위한 코드입니다.
-print(number_generator(3,5))
+# 풀이 2 - list comprehension 활용
+def number_generator(x, n):
+    return [x*i for i in range(1, n+1)]
+
+
+# 풀이 3 - list() 함수 활용
+def number_generator(x, n):
+    return list(range(x, x*n+1, x))
 ```
