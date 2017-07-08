@@ -6,7 +6,7 @@ $orange:   #d28445;
 $yellow:   #f4bf75;
 $green:    #90a959;
 $cyan:     #75b5aa;
-$blue:     #6a9fb5;
+$blue:     #1B6EC4;
 $magenta:  #aa759f;
 $brown:    #8f5536;
 $default:  #505050;
@@ -19,7 +19,7 @@ $theme-color: $blue;
 $theme-color-dark: darken($theme-color, 10%);
 
 $post-date-color: #9a9a9a;
-$title-color: #313131;
+$title-color: #343a40;
 $masthead-title-small-color: #c0c0c0;
 
 /* Layout */
@@ -28,5 +28,5 @@ $overlay-sidebar: false;
 
 /* Font stack */
 $font-serif: "PT Serif", Georgia, "Times New Roman", serif;
-$font-sans: "PT Sans", Helvetica, Arial, sans-serif;
+$font-sans:  'NanumSquare', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
 $font-font-awesome: FontAwesome;

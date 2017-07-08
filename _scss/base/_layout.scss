@@ -35,7 +35,7 @@
 }
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 840px;
   }
 }
 
@@ -45,10 +45,11 @@
   top: 1rem;
   left: auto;
   display: block;
-  padding: .25rem .75rem;
+  padding: 0 .75rem;
+  font-size: 20px;
 }
 .search > i{
-  color: #6a9fb5;
+  color: #1B6EC4;
 }
 
 #search-input{
@@ -97,4 +98,8 @@
   vertical-align: text-top;
   font-size: 80%;
   color : rgba(49, 49, 49, 0.82);
+}
+
+.nav-up {
+    top: -92px;
 }

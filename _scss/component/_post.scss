@@ -6,17 +6,21 @@
   }
 
   @media (min-width: 10px) {
-    font-size: .8rem;
+    font-size: .9rem;
 
-    h1 { font-size: 1.3rem; }
+    h1 { font-size: 1.5rem; }
     h2 {
       margin: 2em 0 1em 0;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: #ec4c6a;
     }
+
     h3, h4, h5, h6 {
       margin: 2em 0 1em 0;
       font-size: 1.0rem;
+    }
+    h3 {
+      font-size: 1.2rem;
     }
   }
 
@@ -41,7 +45,7 @@
   }
 
   article {
-    line-height: 1.4rem;
+    line-height: 30px;
   }
 }
 
