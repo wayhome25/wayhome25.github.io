@@ -143,4 +143,4 @@ $ git branch -d develop(브랜치 별명)
 - 당장 내가 PR을 해야하는 상황에서 했던 작업들을 정리한 것이라,    
   각 절차의 심오한 의미에 대해서는 다루지 못했다.
 - 더 자세한 내용은 [pro git book](https://git-scm.com/book/ko/v1/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0) 에서 확인할 수 있다.
-- 나처럼 급하게 pull Request 해야하는 분들에게 도움이 되었으면 좋겠다.
+- 나처럼 급하게 Pull Request 해야하는 분들에게 도움이 되었으면 좋겠다.
