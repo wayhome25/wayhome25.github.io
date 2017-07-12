@@ -12,7 +12,7 @@ comments: true
 # 들어가기
 django-admin startproject 명령을 통해서 장고 프로젝트를 생성하면, 기본으로 settings.py 파일이 함께 포함된다. settings.py 안에는 다양한 설정 항목이 있는데, 그 중에서 SECRET_KEY 라는 것이 있다. 이는 장고 보안 기능에 활용되는 값으로, 그동안 github의 공개 저장소에 SECRET_KEY를 그대로 노출한 상태로 settings.py 파일을 함께 push 했었다.    
 
-최근 [Two Scoops of Django](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11)의 **5.3 코드에서 설정 분리하기** 를 읽어보니 SECRET_KEY는 외부에 공개되면 안된다는 내용이 있었다. 누구나 한번 쯤은 SECRET_KEY를 외부에 노출한 경험은 있을 것 같은데, 이번 기회에 settings.py의 SECRET_KEY 값을 코드에서 분리해야겠다고 생각했다.
+최근 [Two Scoops of Django](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11)의 **5.3 코드에서 설정 분리하기** 를 읽어보니 비밀 값들은 외부에 공개되면 안된다는 내용이 있었다. 누구나 한번 쯤은 SECRET_KEY를 외부에 노출한 경험은 있을 것 같은데, 이번 기회에 settings.py의 비밀 값을 코드에서 분리해야겠다고 생각했다.
 > 비밀 값들은 반드시 남이 알 수 없어야 한다. 이를 버전 컨트롤 시스템에 추가하면 코드 저장소에 접근할 수 있는 누구에게나 공개된다
 
 ---
@@ -24,16 +24,16 @@ SECRET_KEY는 어디에 사용될까? [Django 공식문서](https://docs.djangop
   기본 get_session_auth_hash()를 사용하는 모든 sessions
 - CookieStorage 혹은 FallbackStorage 를 사용하는 모든 messages
 - 모든 PasswordResetView
-- 다른 키가 제공되지 않는 암호화 서명 사용 시 secret_key가 사용된다.
+- 다른 키가 제공되지 않는 암호화 서명 사용 시 사용된다.
 
 <center>
 <figure>
 <img src="/assets/post-img/django/secret_key.png" alt="views">
-<figcaption>그리고 SECRET_KEY를 공개하면 안된다</figcaption>
+<figcaption>그리고 SECRET_KEY는 공개하면 안된다</figcaption>
 </figure>
 </center>
 <br>
-위와 같이 SECRET_KEY가 노출되면 Django의 보안 기능이 상실될 위험성이 있다.
+위 문서와 같이 비밀 키가 노출되면 Django의 보안 기능이 상실될 위험성이 있다.
 
 #### 나는 이미 공개 저장소에 올려버렸는데 어쩌지?!
 
@@ -46,9 +46,9 @@ SECRET_KEY는 어디에 사용될까? [Django 공식문서](https://docs.djangop
 <br>
 
 나를 포함해서 이렇게 생각할 분들이 많을 것 같아서 찾아보니 배포 후에도 SECRET_KEY 변경이 가능하다는 글이 있었다.
-([Is it possible to change the secret key of a Django application after it deployment in production, If so, what would be the impacts?](https://www.quora.com/Is-it-possible-to-change-the-secret-key-of-a-Django-application-after-it-deployment-in-production-If-so-what-would-be-the-impacts)) SECRET_KEY는 주로 쿠키데이터 해시, 암호화 등 임시적인 일에 사용되고, SECRET_KEY가 변경되면 로그인 세션 등의 데이터가 사라질 수 있다. 확인 차 개인 프로젝트의 SECRET_KEY를 변경하여 로컬 서버에서 다시 테스트를 해보니 큰 문제는 발생하지 않았다. 프로젝트 초반이거나, 복잡한 기능이 없는 프로젝트에서는 SECRET_KEY를 변경해도 괜찮다고 생각한다. (혹시 아니라면 댓글로 알려주시면 감사합니다!)
+([Is it possible to change the secret key of a Django application after it deployment in production, If so, what would be the impacts?](https://www.quora.com/Is-it-possible-to-change-the-secret-key-of-a-Django-application-after-it-deployment-in-production-If-so-what-would-be-the-impacts)) SECRET_KEY는 주로 쿠키데이터 해시, 암호화 등 임시적인 일에 사용되고, 변경 시 로그인 세션 등의 데이터가 사라질 수 있다. 확인 차 개인 프로젝트의 SECRET_KEY를 변경하여 로컬 서버에서 다시 테스트를 해보니 큰 문제는 발생하지 않았다. 프로젝트 초반이거나, 복잡한 기능이 없는 프로젝트에서는 변경해도 괜찮다고 생각한다. (혹시 아니라면 댓글로 알려주시면 감사합니다!)
 
-SECRET_KEY는 50자의 랜덤 문자로 구성되어 있는데, [Django Secret Key Generator](http://www.miniwebtool.com/django-secret-key-generator/) 라는 것도 존재한다. 혹은 아래의 코드를 실행해서 임의 50글자 SECRET_KEY를 직접 생성하는 것도 가능하다. ([코드 출처](https://github.com/honux77/inflearn-django/blob/master/script/genkey.py))
+SECRET_KEY는 50자의 랜덤 문자로 구성되어 있는데, [Django Secret Key Generator](http://www.miniwebtool.com/django-secret-key-generator/) 라는 것도 존재한다. 혹은 아래의 코드를 실행해서 임의 50글자를 직접 생성하는 것도 가능하다. ([코드 출처](https://github.com/honux77/inflearn-django/blob/master/script/genkey.py))
 
 ```python
 import string, random
@@ -65,7 +65,7 @@ print(SECRET_KEY)
 ---
 
 ## SECRET_KEY 분리하기  
-SECRET_KEY를 settings.py 파일에서 분리하는 방법은 여러가지가 있는데 책에서 소개하는 방법은 2가지이다.
+settings.py 파일에서 비밀 값을 분리하는 방법은 여러가지가 있는데 책에서 소개하는 방법은 2가지이다.
 - 환경변수패턴 : SECRET_KEY의 값을 환경변수에 저장하여 참고한다.
 - 비밀파일패턴 : SECRET_KEY의 값을 별도 파일에 저장하여 참고한다.
 
