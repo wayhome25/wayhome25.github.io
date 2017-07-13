@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django - settings.py 의 SECRET_KEY 변경 및 설정 분리하기
+title: Django - settings.py 의 SECRET_KEY 변경 및 분리하기
 category: Django
 tags: [python, Django, ajax]
 comments: true
@@ -73,7 +73,7 @@ settings.py 파일에서 비밀 값을 분리하는 방법은 여러가지가 �
 환경변수란 프로세스가 컴퓨터에서 동작하는 방식에 영향을 미치는, 동적인 값들의 모임이다.([위키](https://ko.wikipedia.org/wiki/%ED%99%98%EA%B2%BD_%EB%B3%80%EC%88%98))
 시스템의 실행파일이 놓여 있는 디렉토리의 지정 등 OS 상에서 동작하는 응용소프트웨어가 참조하기 위한 설정이 기록된다. 환경변수를 사용하여 비밀 키를 보관함으로써 걱정 없이 세팅파일을 github 공개 저장소에 추가할 수 있다.
 
-로컬 개발 환경에서 환경 변수 세팅하려면 다음 코드를 .bashrc 혹은 .bash_profile, .profile, .zshrc 파일에 추가하면 된다. 어느 종류의 shell을 사용하는지에 따라서 편집하는 파일이 달라진다.(mac 사용자 기준)
+로컬 개발 환경에서 환경 변수를 세팅하려면 다음 코드를 .bashrc 혹은 .bash_profile, .profile, .zshrc 파일에 추가하면 된다. 어느 종류의 shell을 사용하는지에 따라서 편집하는 파일이 달라진다.(mac 사용자 기준)
 나의 경우 [zsh](http://ohmyz.sh/)을 사용하고 있어서 .zshrc에 아래와 같이 환경변수 추가 작업을 진행했다.
 
 ```shell
@@ -81,6 +81,9 @@ $ vim ~/.zshrc # vim을 사용하여 .zshrc 파일을 편집하겠다.
 
 # .zshrc 파일에 아래 코드를 추가해준다.
 export INSTA_SECRET_KEY='b_4(!id8ro!1645n@ub55555hbu93gaia0 본인의 고유 비밀 키 추가'
+
+# 환경변수 확인 명령
+$ echo $INSTA_SECRET_KEY
 ```
 
 추가 완료 후, settings.py 파일을 열어서 SECRET_KEY 의 값을 삭제하고 환경변수로 대체한다.
