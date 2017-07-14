@@ -54,7 +54,7 @@ $ python manage.py shell_plus --notebook
 
 <center>
  <figure>
- <img src="/assets/post-img/djnago/jupyter_notebook.png" alt="views">
+ <img src="/assets/post-img/django/jupyter_notebook.png" alt="views">
  <figcaption></figcaption>
  </figure>
  </center>

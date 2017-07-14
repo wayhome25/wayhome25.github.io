@@ -9,12 +9,21 @@ title: About
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필 (구직중)</a><br>
 </p>
 
+## 참여 활동 & 세미나
+- [8퍼센트 두숟갈 스터디](https://8percent.github.io/2017-06-30/%EC%8A%A4%ED%84%B0%EB%94%94%EC%8B%9C%EC%9E%91/), 2017.07.06~(참여중)
+- [파이콘 한국](https://www.pycon.kr/2017/), 2017.08.12~15 (참여예정)
+- [AskDjango 무박 2일 해커톤](https://nomade.kr/moim/askdjango-hackathon-2017/), 2017.08.05~06 (참여예정)
+- [2017 장고걸스 워크샵](https://djangogirls.org/seoul/), 2017.06.23~24
+- [여자개발자 모임터 10주년 세미나](http://korea-womendevelopers.org/), 2017.06.10
+
 ## 공부한 것
 - 컴퓨터공학 (자료구조, 알고리즘)
     - 패스트캠퍼스 컴퓨터 공학 입문 (2017/03-04) [강의 커리큘럼](http://cdn.www.fastcampus.co.kr/wp-content/uploads/2017/02/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99-%EC%9E%85%EB%AC%B8-SCHOOL-2%EA%B8%B0_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%95%88%EB%82%B4%EB%AC%B8.pdf?_ga=1.240441345.321893628.1483015444)
     - oop, memory, data structure, algorithm, network, DB
 
 - Django
+  - [8퍼센트 두숟갈 스터디 참여](https://8percent.github.io/2017-06-30/%EC%8A%A4%ED%84%B0%EB%94%94%EC%8B%9C%EC%9E%91/)
+  - [Two Scoops of Django](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11)
   - [AskDjango - 장고 기본편 (이진석)](https://nomade.kr/vod/django/)
   - [Django로 배우는 쉽고 빠른 웹 개발 파이썬 웹 프로그래밍 실전편](http://www.yes24.com/24/goods/29331035?scode=029)
   - [Django로 배우는 쉽고 빠른 웹 개발 파이썬 웹 프로그래밍 기본편](http://www.hanbit.co.kr/store/books/look.php?p_code=B5790464800)
