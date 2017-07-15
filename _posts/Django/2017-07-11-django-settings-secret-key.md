@@ -2,7 +2,7 @@
 layout: post
 title: Django - settings.py 의 SECRET_KEY 변경 및 분리하기
 category: Django
-tags: [python, Django, ajax]
+tags: [python, Django, settings, secret key]
 comments: true
 ---
 > [Two Scoops of Django](https://www.twoscoopspress.com/products/two-scoops-of-django-1-11) 5장을 읽고 연습한 내용을 정리한 글입니다.  

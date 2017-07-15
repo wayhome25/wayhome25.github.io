@@ -20,10 +20,29 @@ s가 '133303'이라면 ['1', '3', '0', '3']를 리턴
 s가 '47330'이라면 [4, 7, 3, 0]을 리턴
 
 ## 풀이 (python)
+### 1
+```python
+def no_continuous(s):
+    result = []
+    for i, v in enumerate(s):
+        if i == 0:
+            result.append(v)
+        elif s[i-1] == v:
+            continue
+        else:
+            result.append(v)
+    return result
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print( no_continuous( "133303" ))
+```
+
+### 2
+list comprehension을 활용하여 코드 길이를 줄였다.
+
 ```python
 def no_continuous(s):
     # 함수를 완성하세요
-	return [v for i, v in enumerate(s) if (s[i] != s[i-1]) or (s[0] == s[-1])]
+	return [v for i, v in enumerate(s) if i==0 or s[i-1] != s[i]]
 
 # 아래는 테스트로 출력해 보기 위한 코드입니다.
 print( no_continuous( "133303" ))
@@ -32,4 +51,3 @@ print( no_continuous( "133303" ))
 
 ## 배운점
 - `enumerate()` : 순서가 있는 자료형 (리스트, 튜플, 문자열)을 입력으로 받아 인텍스 값을 포함하는 enumerate 객체를 리턴한다.
-- 

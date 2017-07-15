@@ -18,6 +18,27 @@ toWeirdCase함수는 문자열 s를 매개변수로 입력받습니다.
 주의 문자열 전체의 짝/홀수 인덱스가 아니라, 단어(공백을 기준)별로 짝/홀수 인덱스를 판단합니다.
 
 ## 풀이 (python)
+
+### 1
+map을 활용해서 풀었다.
+
+```python
+def toWeirdCase(s):
+    def change(t):
+        result = ""
+        for i, v in enumerate(t):
+            if i % 2:  # 홀수
+                result += v.lower()
+            else:  # 짝수
+                result += v.upper()
+        return result
+    return ' '.join(list(map(change, s.split())))
+
+
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print("결과 : {}".format(toWeirdCase("try hello world")));
+```
+### 2
 ```python
 def toWeirdCase(s):    
 	s = s.split()
