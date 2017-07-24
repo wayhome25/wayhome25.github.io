@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Python - 네이버 검색 Open API를 이용하여 책 검색하기
-category: Python
+title: 파이썬 - 네이버 검색 Open API를 이용하여 책 검색하기
+category: python
 tags: [python, api]
 comments: true
 ---
