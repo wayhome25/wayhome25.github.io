@@ -1,6 +1,6 @@
 ---
 layout: post
-title: two scoops of django - 장고 쿼리와 데이터베이스 레이어
+title: 장고 쿼리와 데이터베이스 레이어 (ORM, 쿼리표현식, 트랜잭션)
 category: Django
 tags: [python, Django, orm, database]
 comments: true
