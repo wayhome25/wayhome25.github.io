@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django - ORM, 쿼리표현식
+title: Django - ORM, 쿼리셋, 예외처리
 category: Django
 tags: [python, Django, orm, database]
 comments: true
