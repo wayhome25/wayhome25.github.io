@@ -55,13 +55,20 @@ title: About
 
 ## 만들어 본 것
 
+- [사내 도서관리 웹어플리케이션(진행중)](https://github.com/wayhome25/our-book)
+  - 도서 검색 및 DB 등록 (네이버 검색 API 활용)
+  - 도서 대여 및 연체관리
+    - 대여 / 반납 기능
+    - 연체시 email, slack을 통한 알림
+  - 구매 희망도서 신청
+  - 도서목록 csv 다운로드
+  - 유저간 쪽지 교환 기능
 
-- [인스타그램st 웹어플리케이션 구현 (진행중)](https://github.com/wayhome25/Instagram)
+- [인스타그램st 웹어플리케이션 구현](https://github.com/wayhome25/Instagram)
   - Django를 활용하여 인스타그램 기능을 가진 웹어플리케이션을 구현합니다.
   - 동작하는 단위별로 commit을 추가한다. 코드 리뷰를 고려한 commit 메시지를 작성한다.
   - 필요한건 Django 공식 문서, stackoverflow를 찾아보고 문제를 해결한다.
   - 궁금한 코드는 Django 소스코드 를 열어서 직접 읽어본다.
-  - 능동적으로 고민하고 가능한 스스로 코드를 짜본다. 비효율적이라도 직접 해보고, 다른 사람의 코드를 참고한다.
 
 - [두번째 Django 프로젝트 영어 스터디용 게시판](https://github.com/wayhome25/django_english_project)
     - django의 기본적인 기능을 활용하여 영어 스터디에서 사용할 게시판을 만들었습니다.
