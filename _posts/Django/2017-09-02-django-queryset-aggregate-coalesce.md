@@ -5,7 +5,7 @@ category: Django
 tags: [django, annotate, aggregate, Coalesce]
 comments: true
 ---
-<br><br>
+<br>
 
 django의 aggregate를 활용하면 원하는 필드의 합계, 평균, 최대, 최소값을 구하는 등의 작업을 쉽게 할 수 있다. [참고 : django aggregation](https://docs.djangoproject.com/ko/1.11/topics/db/aggregation/) 예를 들면 아래의 코드를 통해서
 WishBook 모델에서 2017년 8월에 생성된 레코드를 필터링하고 price 필드의 합을 구할 수 있다.
@@ -31,15 +31,16 @@ None을 리터하게되면 필터링 결과값이 없을 때 아래와 같이 �
 
 이를 해결하려면 크게 2가지 방법을 사용할 수 있다.
 
-- **A or B를 활용하여 A가 null 인 경우 B를 리턴하기**
+- 1) **A or B를 활용하여 A가 null 인 경우 B를 리턴하기**
 - 별도의 임포트가 필요하지 않다.
 
 ```python
 total_price = WishBook.objects.filter(created_at__year='2017', created_at__month='09').aggregate(total=Sum('price'))['total'] or 0
 ```
 
-- **Coalesce(A, B, C..)를 활용하여 왼쪽부터 인자값을 검사하고 null이 아닌 첫번째 값을 리턴하기**
+- 2) **Coalesce(A, B, C..)를 활용하여 왼쪽부터 인자값을 검사하고 null이 아닌 첫번째 값을 리턴하기**
 - [Coalesce](https://docs.djangoproject.com/ko/1.11/ref/models/database-functions/#coalesce)는 Django 1.8 부터 지원되고, django.db.models.functions에서 임포트하여 사용할 수 있다.
+- 위의 1) 방법은 별도의 임포트가 필요 없기 때문에 간편하고, 2) 방법은 null일 가능성이 있는 후보들이 여러개일때 사용하면 편리하겠다는 생각이 든다.
 
 ```python
 from django.db.models.functions import Coalesce
