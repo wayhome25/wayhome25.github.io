@@ -7,7 +7,7 @@ comments: true
 ---
 <br>
 
-> 장고를 공부하면서 많은 도움을 받고 있는 [simple is better than complex](https://simpleisbetterthancomplex.com/)의 [Django Tips #8 Blank or Null?](https://simpleisbetterthancomplex.com/tips/2016/07/25/django-tip-8-blank-or-null.html) 번역글입니다. 기분좋게 선뜻 번역을 허락해준 [Vitor](https://github.com/vitorfs)에게 감사드립니다.
+> 장고를 공부하면서 많은 도움을 받고 있는 [simple is better than complex](https://simpleisbetterthancomplex.com/)의 [How to Create Django Data Migrations](https://simpleisbetterthancomplex.com/tutorial/2017/09/26/how-to-create-django-data-migrations.html) 번역글입니다. 기분좋게 선뜻 번역을 허락해준 [Vitor](https://github.com/vitorfs)에게 감사드립니다.
 
 <br>
 ![featured-data-migrations](https://i.imgur.com/wZaNGfm.jpg)
@@ -16,9 +16,9 @@ comments: true
 
 데이터 마이그레이션은 스키마와 함께 DB의 데이터를 변경하는 편리한 방법이다. 장고는 의존성과 실행순서를 기록하고 주어진 데이터 마이그레이션이 이미 어플리케이션에 적용되었는지 확인한다.
 
-일반적인 데이터 마이그레이션의 사용 케이스는 not-nullable인 새로운 필드를 추가할 때이다. 혹은 어떤 것의 캐시된 카운트를 저장하는 필드를 생성하거나 할 때 우리는 새로운 필드를 생성하고 초기 카운트 값을 추가할 수 있다.
+일반적인 데이터 마이그레이션의 사용 케이스는 not-nullable인 새로운 필드를 추가할 때이다. 혹은 캐시된 카운트를 저장하는 필드를 생성하거나 할 때 우리는 새로운 필드를 생성하고 초기 카운트 값을 추가할 수 있다.
 
-이 포스트에서는 당신의 필요를 충족시키기 위해서 쉽게 확장하고 수정할 수 있는 간단한 예시를 살펴보려고 한다.
+이 포스트에서는 당신의 필요를 충족시키기 위해 쉽게 확장하고 수정할 수 있는 간단한 예시를 살펴보려고 한다.
 
 ---
 
@@ -181,7 +181,7 @@ slugify('How to Extend the Django User Model')
 'how-to-extend-the-django-user-model'
 ```
 
-어쨌든 데이터 마이그레이션을 생성하기 위한 `RunPython` 메소드에 의해서 사용된 이 함수는 **apps, schema_editor** 2가지 파라미터를 받는다. `RunPython`은 해당 파라미터를 제공한다.또한 `apps.get_model('app_name', 'model_name')` 메소드를 사용하여 모델을 import 하는 것을 기억하자.
+어쨌든 데이터 마이그레이션을 생성하기 위한 `RunPython` 메소드에 의해서 사용된 이 함수는 **apps, schema_editor** 2가지 파라미터를 받는다. `RunPython`은 해당 파라미터를 제공한다. 또한 `apps.get_model('app_name', 'model_name')` 메소드를 사용하여 모델을 import 하는 것을 기억하자.
 
 일반적인 모델 마이그레이션과 동일하게 파일을 저장하고 마이그레이션을 실행한다.
 
