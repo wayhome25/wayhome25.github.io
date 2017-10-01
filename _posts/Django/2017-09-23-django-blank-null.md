@@ -2,7 +2,7 @@
 layout: post
 title: (번역) Django Tips &#35;8 Blank or Null?
 category: Django
-tags: [django, slack, bot, 슬랙]
+tags: [django, model, blank, null, field, migration]
 comments: true
 ---
 <br>
