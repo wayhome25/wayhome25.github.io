@@ -6,17 +6,17 @@ title: About
 <p class="message">
   공부한 내용을 정리하는 블로그입니다.<br>
   소통은 환영합니다! 편하게 댓글, 메일 주세요 : ) <br>
-  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필 (구직중)</a><br>
+  <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
 
 ## 참여 활동 & 세미나
 - [8퍼센트 두숟갈 스터디](https://8percent.github.io/2017-06-30/%EC%8A%A4%ED%84%B0%EB%94%94%EC%8B%9C%EC%9E%91/), 2017.07.06~(참여중)
-- [파이콘 한국](https://www.pycon.kr/2017/), 2017.08.12~15 (참여예정)
-- [AskDjango 무박 2일 해커톤](https://nomade.kr/moim/askdjango-hackathon-2017/), 2017.08.05~06 (참여예정)
+- [파이콘 한국](https://www.pycon.kr/2017/), 2017.08.12~15
+- [AskDjango 무박 2일 해커톤](https://nomade.kr/moim/askdjango-hackathon-2017/), 2017.08.05~06
 - [2017 장고걸스 워크샵](https://djangogirls.org/seoul/), 2017.06.23~24
 - [여자개발자 모임터 10주년 세미나](http://korea-womendevelopers.org/), 2017.06.10
 
-## 공부한 것
+<!-- ## 공부한 것
 - 컴퓨터공학 (자료구조, 알고리즘)
     - 패스트캠퍼스 컴퓨터 공학 입문 (2017/03-04) [강의 커리큘럼](http://cdn.www.fastcampus.co.kr/wp-content/uploads/2017/02/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99-%EC%9E%85%EB%AC%B8-SCHOOL-2%EA%B8%B0_%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC-%EB%B0%8F-%EA%B5%90%EC%9C%A1-%EC%95%88%EB%82%B4%EB%AC%B8.pdf?_ga=1.240441345.321893628.1483015444)
     - oop, memory, data structure, algorithm, network, DB
@@ -50,10 +50,10 @@ title: About
   - [Web Front-End (윤지수)](http://olc.kr/course/course_online_view.jsp?id=470)
 
 - 파이어베이스
-  - [파이어베이스(Firebase)를 이용한 간단한 웹 어플리케이션 만들기 (인프런)](https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B0%95%EC%A2%8C-%EC%9B%B9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/)
+  - [파이어베이스(Firebase)를 이용한 간단한 웹 어플리케이션 만들기 (인프런)](https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B0%95%EC%A2%8C-%EC%9B%B9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/) -->
 
 
-## 만들어 본 것
+<!-- ## 만들어 본 것
 
 - [사내 도서관리 웹어플리케이션(진행중)](https://github.com/wayhome25/our-book)
   - 도서 검색 및 DB 등록 (네이버 검색 API 활용)
@@ -94,4 +94,4 @@ title: About
 	- [sass를 활용한 텀블벅 웹 페이지 마크업](https://wayhome25.github.io/fastcampus_school/01_html-css/tumblbug/projects.html)
 	- [직접 제작한 그리드 시스템을 활용한 쇼핑몰 메인화면 레이아웃](https://wayhome25.github.io/front-end/practice_team_activity)
 	- [반응형 웹 페이지 ](https://wayhome25.github.io/small_project/responsive_website/)
-	- [그 밖의 프론트엔드 연습목록](https://github.com/wayhome25/front-end/blob/master/Readme.md)
+	- [그 밖의 프론트엔드 연습목록](https://github.com/wayhome25/front-end/blob/master/Readme.md) -->
