@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 매개변수(parameter)와 전달인자(parameter)
+title: 매개변수(parameter)와 전달인자(argument)
 category: etc
 tags: [parameter, parameter]
 comments: true
