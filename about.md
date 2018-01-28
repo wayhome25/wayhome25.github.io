@@ -4,13 +4,15 @@ title: About
 ---
 
 <p class="message">
-  공부한 내용을 정리하는 블로그입니다.<br>
-  소통은 환영합니다! 편하게 댓글, 메일 주세요 : ) <br>
+  <a href="https://brunch.co.kr/magazine/8percent">8퍼센트 개발팀</a>에서 일하고 있는 초보 주니어 개발자<br>
+  (꾸준히 하다보면 점점 나아지겠지 하는 마음으로)<br>
+  공부한 내용을 정리하는 블로그입니다. <br>
   <a href="https://www.rocketpunch.com/@wayhome25">로켓펀치 프로필</a><br>
 </p>
 
 ## 참여 활동 & 세미나
-- [8퍼센트 두숟갈 스터디](https://8percent.github.io/2017-06-30/%EC%8A%A4%ED%84%B0%EB%94%94%EC%8B%9C%EC%9E%91/), 2017.07.06~(참여중)
+- [파이썬 연말 세미나](http://blog.pycon.kr/2017/12/27/python-seminar/) 2017.12
+- [8퍼센트 두숟갈 스터디](https://brunch.co.kr/@leehosung/42), 2017.07~2017.12
 - [파이콘 한국](https://www.pycon.kr/2017/), 2017.08.12~15
 - [AskDjango 무박 2일 해커톤](https://nomade.kr/moim/askdjango-hackathon-2017/), 2017.08.05~06
 - [2017 장고걸스 워크샵](https://djangogirls.org/seoul/), 2017.06.23~24
