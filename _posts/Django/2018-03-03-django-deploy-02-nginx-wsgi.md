@@ -25,7 +25,7 @@ comments: false
 
 #### 3. Unix Socket
 웹서버(Nginx) - 웹어플리케이션서버(uWSGI) 사이의 통신을 매개
-HTTP 요청을 사용할 수도 있지만 서버 안쪽에서의 통신이기 때문에 socket 방식이 더 효율이 좋음
+HTTP 요청을 사용할 수도 있지만 서버 안쪽에서의 통신이기 때문에 socket 방식이 overhead가 적어서 더 효율이 좋음
 
 #### 4. 웹어플리케이션서버(uWSGI)
 웹 서버(Nginx)와 웹 애플리케이션(Django)간의 연결을 중계

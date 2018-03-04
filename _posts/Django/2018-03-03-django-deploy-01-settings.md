@@ -68,7 +68,8 @@ project_folder/
   "django": {
     "allowed_hosts": [
       "localhost",
-      "127.0.0.1"
+      "127.0.0.1",
+      ".compute.amazonaws.com"
     ]
   }
 }

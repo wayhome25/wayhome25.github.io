@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Django 배포연습 3 - EC2 인스턴스 생성 및 기본 설정
+title: Django 배포연습 3 - EC2 ubuntu 서버 인스턴스 생성 및 기본 설정
 category: Django
-tags: [django, deploy, nginx, wsgi]
+tags: [django, deploy, ec2, aws]
 comments: false
 ---
 
 > nginx, uwsgi, docker를 활용한 배포 연습 과정을 기록한 글입니다.   
-> 개인 공부후 자료를 남기기 위한 목점임으로 내용상에 오류가 있을 수 있습니다.
+> 개인 공부 후 자료를 남기기 위한 목점임으로 내용상에 오류가 있을 수 있습니다.
 >
 > - nginx, uwsgi를 통해서 아마존 EC2에서 장고 앱 어플리케이션을 실행시켜 보는 것을 목표로 한다.
 > - 최소한의 설정만을 포함한다.
@@ -171,7 +171,7 @@ pip install -r requirements.txt
 
 ```
 cd deploy_ec2/django_app/
-./manage.py runserver 0:8000
+python manage.py runserver 0:8000 --settings=config.settings.debug
 ```
 
 ### 보안그룹 인바운드 설정 수정
@@ -187,6 +187,16 @@ cd deploy_ec2/django_app/
 
 ![screen 36](https://i.imgur.com/gtjIuzD.png)
 
+#### ALLOWED_HOSTS 설정
+- settings.py의 ALLOWED_HOSTS에 특정 서버의 IP주소나 도메인에 대해서만 장고 웹어플리케이션이 서빙을 수행할 수 있도록 한다.
+
+```
+ALLOWED_HOSTS = [
+	'<ec2 domain name'>,
+	또는
+	'.amazonaws.com',  # 구체적으로 작성하는 편이 좋음
+]
+```
 
 ## 참고
 - [Django Girs를 위한 Django on AWS](http://awsblogskr.s3-ap-northeast-2.amazonaws.com/pdf/2015-06-djangogirls-seoul-aws.pdf)
