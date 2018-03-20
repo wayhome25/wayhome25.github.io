@@ -133,7 +133,7 @@ application = get_wsgi_application()
 
 #### uWSGI debug용 설정 파일 작성 예시
 - 위의 예시와 같이 uwsgi 실행시 모든 옵션을 적어야한다면 번거롭기 때문에 설정파일을 따로 생성한다.
-- 참고로 ini 파일에서는 ~/ (home폴더) 사용이 불가능하기 떄문에 절대경로 입력이 필요하다.
+- 참고로 ini 파일에서는 ~/ (home폴더) 사용이 불가능하기 때문에 절대경로 입력이 필요하다.
 
 ```ini
 [uwsgi]
@@ -212,6 +212,7 @@ sudo chown -R deploy-user:deploy-user /tmp
 ### uWSGI 서비스 설정파일 작성
 - [Systemd](http://uwsgi-docs.readthedocs.io/en/latest/Systemd.html)
 - [How To Use Systemctl to Manage Systemd Services and Units](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units#service-management)
+- 작성 파일 경로 : /etc/systemd/system/uwsgi.service
 
 ```
 sudo vi /etc/systemd/system/uwsgi.service
@@ -259,3 +260,4 @@ WantedBy=multi-user.target
 - [Setting up Django and your web server with uWSGI and nginx](http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
 - [Systemd](http://uwsgi-docs.readthedocs.io/en/latest/Systemd.html)
 - [How To Use Systemctl to Manage Systemd Services and - Units](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units#service-management)
+- [생활코딩-항상실행(daemon, service)](https://opentutorials.org/course/2598/14217)
